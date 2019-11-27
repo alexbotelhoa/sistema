@@ -1,0 +1,75 @@
+html, body, body div, span, object, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, label, legend, caption, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary { margin: 0; padding: 0px 0px 0px 0px; font-size: 100%; font-weight: normal; vertical-align: baseline; background: transparent }
+article, aside, figure, footer, header, main, menu, nav, section, details, summary { display: block }
+
+html, body { height: 100% }
+html { overflow-y: scroll; -moz-user-select: -moz-none; -ms-user-select: none; -webkit-user-select: none; user-select: none }
+body { font-family: Arial, Helvetica, sans-serif; color: #666; text-align: left; url(/arquivos/fillet-repeat.jpg) repeat; -webkit-touch-callout: none; -moz-user-select: -moz-none; -ms-user-select: none; -webkit-user-select: none; user-select: none }
+
+table.rodape {
+    font: 11px/24px Verdana, Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+}
+
+tr.rodape {
+    font: 12px Helvetica, Verdana, Arial, sans-serif;
+    border-top: 0px solid #FB7A31;
+    border-bottom: 0px solid #CCC;
+    background: #F8F303;
+}
+
+td.rodape {
+    border-top: 0px solid #CCC;
+    border-bottom: 0px solid #CCC;
+    padding: 10px 1em;
+}
+
+#header {
+    background: #79B35F;
+    text-align: center;
+    padding: 0px 0px 0px 0px;
+}
+#menu {
+    background: #F9FAE8;
+    text-align: center;
+    padding: 1px 0px 0px 0px;
+ }
+
+#body {
+    background: #FFF;
+    text-align: center;
+}
+
+#footer {
+    float: left;
+    text-align: center;
+    width: 100%;
+    background: #F8F303;
+    height: 10%;
+}
+.menu{background:#F9FAE8; list-style:none; border:1px solid #c0c0c0; display: inline-block;}
+.menu li{position:relative; float:left; border-right:1px solid #c0c0c0; width: 120px;}
+.menu li a{color:#333; text-decoration:none; padding: 5px 25px; display:block;}
+.menu li a:hover{background:#1564C1; color:#fff; -moz-box-shadow:0 3px 10px 0 #8FE0FD; -webkit-box-shadow:0 3px 10px 0 #8FE0FD; text-shadow:0px 0px 5px #fff;}
+.menu li ul{position:absolute; top:29px; left:0; background-color:#F9FAE8; display:none;}
+.menu li:hover ul, .menu li.over ul{display:block;}
+.menu li ul li{border:1px solid #c0c0c0; display:block; width:120px;}
+
+input.button {
+    width: 100px;
+    height: 30px;
+}
+
+input[type=text], input[type=email] {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #EFF3F7;
+    font-family: "Roboto Mono";
+    font-size: 14px;
+    padding: 8px 4px;
+}
+
+input[type=text]:focus, input[type=email]:focus {
+    border-color: #1A232E;
+}

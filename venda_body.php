@@ -108,7 +108,7 @@ if (isset($_GET['src'])) {
             $consulta=mysqli_query($con, $sql); $valor_total_venda="0";$valor_total_imposto="0";$valor_total_reposicao="0";$valor_total_lucro="0";
             while ($dados = mysqli_fetch_array($consulta)) {
                 $sql2 = "SELECT * FROM se_produtos WHERE pdt_id = $dados[scl_pdt_id]";
-                $consulta2=mysqli_query($sql2, $con);
+                $consulta2=mysqli_query($con, $sql2);
                 $dados2 = mysqli_fetch_array($consulta2);
 
                 $valor_total_venda = $valor_total_venda + $dados['scl_quantidade'] * $dados2['pdt_valor'] * (((($dados2['pdt_pis'] + $dados2['pdt_cofins'] + $dados2['pdt_icms'] + $dados2['pdt_ipi']) + ($dados2['pdt_lucro'] - $dados['scl_desconto']))/100)+1);

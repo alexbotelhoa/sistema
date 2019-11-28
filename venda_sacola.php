@@ -14,6 +14,7 @@
         $sql2 = "SELECT * FROM se_produtos WHERE pdt_id = $dados[scl_pdt_id]";
         $consulta2=mysqli_query($con, $sql2) or die ();
         $dados2 = mysqli_fetch_array($consulta2);
+
         $valor_venda = $dados['scl_quantidade'] * ($dados2['pdt_valor'] * (((($dados2['pdt_pis'] + $dados2['pdt_cofins'] + $dados2['pdt_icms'] + $dados2['pdt_ipi']) + $dados2['pdt_lucro'])/100)+1));
         $valor_final = $dados['scl_quantidade'] * ($dados2['pdt_valor'] * (((($dados2['pdt_pis'] + $dados2['pdt_cofins'] + $dados2['pdt_icms'] + $dados2['pdt_ipi']) + ($dados2['pdt_lucro'] - $dados['scl_desconto']))/100)+1));
 

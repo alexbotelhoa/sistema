@@ -239,38 +239,50 @@
 
 
 
-                $mes6=0;$mes5=0;$mes4=0;$mes3=0;$mes2=0;$mes1=0;$mes0=0;
-                for ($x=7;$x>0;$x--) {
+                $mes6=0;$mes5=0;$mes4=0;$mes3=0;$mes2=0;$mes1=0;$mes0=0; $r=array();
+                for ($x=6;$x>0;$x--) {
 
 
                     $sql2 = "
-                              SELECT pag_data, pag_reco, pag_pago 
-                              FROM sm_pagamentos 
-                              WHERE pag_cliente_id = $dados[pag_cliente_id] AND 
-                              MONTH(pag_data)=MONTH(ADDDATE('2019-07-01', INTERVAL -".$x." MONTH)) AND YEAR(pag_data)=YEAR(ADDDATE('2019-07-01', INTERVAL -".$x." MONTH))
-                                       
-                              ";
+                          SELECT pag_data, pag_reco, pag_pago 
+                          FROM sm_pagamentos 
+                          WHERE pag_cliente_id = $dados[pag_cliente_id] AND 
+                          MONTH(pag_data)=MONTH(ADDDATE('2019-07-01', INTERVAL -".$x." MONTH)) AND YEAR(pag_data)=YEAR(ADDDATE('2019-07-01', INTERVAL -".$x." MONTH))
+                                   
+                          ";
                     $consulta2=mysqli_query($con, $sql2) or die ("<font style=Arial color=red>Houve um erro na consulta 2 dos dados</font>");
                     $dados2 = mysqli_fetch_array($consulta2);
 
 
                         //list ($mes, $dia, $ano) = split ('[/.-]', $dados2['pag_data']);
                         echo $dados2['pag_data']."(".$dados2['pag_reco'].")<br>";
-
+                        $r[]=$dados2['pag_pago'];
 
 
                 }
+                $sql3 = "
+                          SELECT pag_data, pag_reco, pag_pago 
+                          FROM sm_pagamentos 
+                          WHERE pag_cliente_id = $dados[pag_cliente_id] AND 
+                          MONTH(pag_data)=MONTH('2019-07-01')                                       
+                          ";
+                $consulta3=mysqli_query($con, $sql3) or die ("<font style=Arial color=red>Houve um erro na consulta 2 dos dados</font>");
+                $dados3 = mysqli_fetch_array($consulta3);
+
+                echo $dados2['pag_data']."(".$dados2['pag_reco'].")<br>";
+                $r[]=$dados3['pag_pago'];
+
 
 
                 echo "  <tr>
                             <td align='center'>".$dados['pag_cliente_id']."</td>
-                            <td align='center'>".$mes6."</td>
-                            <td align='center'>".$mes5."</td>
-                            <td align='center'>".$mes4."</td>
-                            <td align='center'>".$mes3."</td>
-                            <td align='center'>".$mes2."</td>
-                            <td align='center'>".$mes1."</td>
-                            <td align='center'>".$mes0."</td>
+                            <td align='center'>".$r[0]."</td>
+                            <td align='center'>".$r[1]."</td>
+                            <td align='center'>".$r[2]."</td>
+                            <td align='center'>".$r[3]."</td>
+                            <td align='center'>".$r[4]."</td>
+                            <td align='center'>".$r[5]."</td>
+                            <td align='center'>".$r[6]."</td>
                         </tr>";
 
 

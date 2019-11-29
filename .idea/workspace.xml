@@ -54,8 +54,8 @@
       <file leaf-file-name="pagamento_body2.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pagamento_body2.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="249" column="139" lean-forward="false" selection-start-line="249" selection-start-column="139" selection-end-line="249" selection-end-column="139" />
+            <state relative-caret-position="317">
+              <caret line="257" column="81" lean-forward="false" selection-start-line="257" selection-start-column="81" selection-end-line="257" selection-end-column="81" />
               <folding>
                 <element signature="n#style#0;n#table#0;n#form#0;n#center#0;n#!!top" expanded="true" />
                 <element signature="e#348#354#0#HTML" expanded="true" />
@@ -63,31 +63,39 @@
                 <element signature="n#style#0;n#table#0;n#center#0;n#center#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#table#0;n#center#1;n#center#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#table#0;n#center#2;n#center#0;n#!!top" expanded="true" />
-                <marker date="1574989872766" expanded="true" signature="3685:3690" ph="..." />
-                <marker date="1574989872766" expanded="false" signature="3975:4093" ph="..." />
-                <marker date="1574989872766" expanded="true" signature="4721:4726" ph="..." />
-                <marker date="1574989872766" expanded="true" signature="5218:5393" ph="SELECT pag_c... sm_pagamentos" />
-                <marker date="1574989872766" expanded="true" signature="5218:5394" ph="SELECT pag_c... sm_pagamentos" />
-                <marker date="1574989872766" expanded="true" signature="5488:5493" ph="..." />
-                <marker date="1574989872766" expanded="true" signature="5759:5962" ph="SELECT pag_d... sm_pagamentos" />
-                <marker date="1574989872766" expanded="true" signature="6039:6044" ph="..." />
-                <marker date="1574989872766" expanded="true" signature="6471:6476" ph="..." />
-                <marker date="1574989872766" expanded="true" signature="7005:7180" ph="SELECT pag_c... sm_pagamentos" />
-                <marker date="1574989872766" expanded="true" signature="7005:7181" ph="SELECT pag_c... sm_pagamentos" />
-                <marker date="1574989872766" expanded="true" signature="7275:7280" ph="..." />
-                <marker date="1574989872766" expanded="true" signature="7546:7840" ph="SELECT pag_d... sm_pagamentos" />
-                <marker date="1574989872766" expanded="true" signature="7917:7922" ph="..." />
-                <marker date="1574989872766" expanded="true" signature="8347:8352" ph="..." />
-                <marker date="1574989872766" expanded="true" signature="9396:9572" ph="SELECT pag_c... sm_pagamentos" />
-                <marker date="1574989872766" expanded="true" signature="9666:9671" ph="..." />
-                <marker date="1574989872766" expanded="true" signature="9976:10174" ph="SELECT pag_d... sm_pagamentos" />
-                <marker date="1574989872766" expanded="true" signature="9976:10228" ph="SELECT pag_d... sm_pagamentos" />
-                <marker date="1574989872766" expanded="true" signature="9976:10313" ph="SELECT pag_d... sm_pagamentos" />
-                <marker date="1574989872766" expanded="true" signature="9976:10353" ph="SELECT pag_d... sm_pagamentos" />
-                <marker date="1574989872766" expanded="true" signature="10465:10470" ph="..." />
-                <marker date="1574989872766" expanded="true" signature="10815:10854" ph="..." />
-                <marker date="1574989872766" expanded="true" signature="10815:11360" ph="..." />
-                <marker date="1574989872766" expanded="true" signature="11499:11504" ph="..." />
+                <marker date="1574990760775" expanded="true" signature="3685:3690" ph="..." />
+                <marker date="1574990760775" expanded="false" signature="3975:4093" ph="..." />
+                <marker date="1574990760775" expanded="true" signature="4721:4726" ph="..." />
+                <marker date="1574990760775" expanded="true" signature="5218:5393" ph="SELECT pag_c... sm_pagamentos" />
+                <marker date="1574990760775" expanded="true" signature="5218:5394" ph="SELECT pag_c... sm_pagamentos" />
+                <marker date="1574990760775" expanded="true" signature="5488:5493" ph="..." />
+                <marker date="1574990760775" expanded="true" signature="5759:5962" ph="SELECT pag_d... sm_pagamentos" />
+                <marker date="1574990760775" expanded="true" signature="6039:6044" ph="..." />
+                <marker date="1574990760775" expanded="true" signature="6471:6476" ph="..." />
+                <marker date="1574990760775" expanded="true" signature="7005:7180" ph="SELECT pag_c... sm_pagamentos" />
+                <marker date="1574990760775" expanded="true" signature="7005:7181" ph="SELECT pag_c... sm_pagamentos" />
+                <marker date="1574990760775" expanded="true" signature="7275:7280" ph="..." />
+                <marker date="1574990760775" expanded="true" signature="7546:7840" ph="SELECT pag_d... sm_pagamentos" />
+                <marker date="1574990760775" expanded="true" signature="7917:7922" ph="..." />
+                <marker date="1574990760775" expanded="true" signature="8347:8352" ph="..." />
+                <marker date="1574990760775" expanded="true" signature="9396:9572" ph="SELECT pag_c... sm_pagamentos" />
+                <marker date="1574990760775" expanded="true" signature="9666:9671" ph="..." />
+                <marker date="1574990760775" expanded="true" signature="9984:10170" ph="SELECT pag_d... sm_pagamentos" />
+                <marker date="1574990760775" expanded="true" signature="9984:10224" ph="SELECT pag_d... sm_pagamentos" />
+                <marker date="1574990760775" expanded="true" signature="9984:10309" ph="SELECT pag_d... sm_pagamentos" />
+                <marker date="1574990760775" expanded="true" signature="9984:10345" ph="SELECT pag_d... sm_pagamentos" />
+                <marker date="1574990760775" expanded="true" signature="10453:10458" ph="..." />
+                <marker date="1574990760775" expanded="true" signature="10875:11096" ph="SELECT pag_d... sm_pagamentos" />
+                <marker date="1574990760775" expanded="true" signature="11239:11244" ph="..." />
+                <marker date="1574990760775" expanded="true" signature="11508:11547" ph="..." />
+                <marker date="1574990760775" expanded="true" signature="11508:11638" ph="..." />
+                <marker date="1574990760775" expanded="true" signature="11508:11700" ph="..." />
+                <marker date="1574990760775" expanded="true" signature="11508:11762" ph="..." />
+                <marker date="1574990760775" expanded="true" signature="11508:11824" ph="..." />
+                <marker date="1574990760775" expanded="true" signature="11508:11948" ph="..." />
+                <marker date="1574990760775" expanded="true" signature="11508:12010" ph="..." />
+                <marker date="1574990760775" expanded="true" signature="11508:12053" ph="..." />
+                <marker date="1574990760775" expanded="true" signature="12192:12197" ph="..." />
               </folding>
             </state>
           </provider>
@@ -145,29 +153,11 @@
       <file leaf-file-name="ger_sol_ans.php" pinned="false" current-in-tab="false">
         <entry file="file://D:/WWW/qualidade/ger_sol_ans.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3168">
-              <caret line="182" column="24" lean-forward="false" selection-start-line="182" selection-start-column="24" selection-end-line="188" selection-end-column="25" />
+            <state relative-caret-position="317">
+              <caret line="61" column="38" lean-forward="false" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="38" />
               <folding>
                 <marker date="1466616205921" expanded="true" signature="10038:10767" ph="SELECT date_... solicitacao" />
                 <marker date="1466616205921" expanded="true" signature="29716:30158" ph="SELECT empre... solicitacao" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="set_sol_uar.php" pinned="false" current-in-tab="false">
-        <entry file="file://D:/WWW/qualidade/set_sol_uar.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="83" column="160" lean-forward="true" selection-start-line="83" selection-start-column="160" selection-end-line="83" selection-end-column="247" />
-              <folding>
-                <marker date="1466617471225" expanded="true" signature="10121:10576" ph="SELECT parec... parecer" />
-                <marker date="1466617471225" expanded="true" signature="11808:12366" ph="SELECT parec... parecer" />
-                <marker date="1466617471225" expanded="true" signature="12447:13006" ph="SELECT parec... parecer" />
-                <marker date="1466617471225" expanded="true" signature="13087:13644" ph="SELECT parec... parecer" />
-                <marker date="1466617471225" expanded="true" signature="13725:14284" ph="SELECT parec... parecer" />
-                <marker date="1466617471225" expanded="true" signature="14365:14923" ph="SELECT parec... parecer" />
-                <marker date="1466617471225" expanded="true" signature="15004:15562" ph="SELECT parec... parecer" />
               </folding>
             </state>
           </provider>
@@ -195,6 +185,7 @@
       <find>mysqli_query($sql, $con)</find>
       <find>mysqli_close()</find>
       <find>$desc</find>
+      <find>array</find>
     </findStrings>
     <replaceStrings>
       <replace>width=&quot;60&quot;</replace>
@@ -366,12 +357,12 @@
       <workItem from="1574248693805" duration="83096000" />
       <workItem from="1574855282787" duration="3568000" />
       <workItem from="1574888282201" duration="87000" />
-      <workItem from="1574896505131" duration="43834000" />
+      <workItem from="1574896505131" duration="44716000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="149221000" />
+    <option name="totallyTimeSpent" value="150103000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -407,13 +398,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://D:/WWW/sies/pessoa_alt.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1938">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/produto.php" />
     <entry file="file://$PROJECT_DIR$/menu.php" />
     <entry file="file://$PROJECT_DIR$/index.php" />
@@ -781,27 +765,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pagamento_visoes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="10" lean-forward="false" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
-          <folding>
-            <element signature="n#style#0;n#table#0;n#center#0;n#!!top" expanded="true" />
-            <marker date="1574969999154" expanded="true" signature="412:659" ph="SELECT pag_c... sm_pagamentos" />
-            <marker date="1574969999154" expanded="true" signature="412:669" ph="SELECT pag_c... sm_pagamentos" />
-            <marker date="1574969999154" expanded="true" signature="412:702" ph="SELECT pag_c... sm_pagamentos" />
-            <marker date="1574969999154" expanded="true" signature="412:703" ph="SELECT pag_c... sm_pagamentos" />
-            <marker date="1574969999154" expanded="true" signature="412:713" ph="SELECT pag_c... sm_pagamentos" />
-            <marker date="1574969999154" expanded="true" signature="412:778" ph="SELECT pag_c... sm_pagamentos" />
-            <marker date="1574969999154" expanded="true" signature="851:856" ph="..." />
-            <marker date="1574969999154" expanded="true" signature="1006:1053" ph="..." />
-            <marker date="1574969999154" expanded="true" signature="1006:1136" ph="..." />
-            <marker date="1574969999154" expanded="true" signature="1006:1504" ph="..." />
-            <marker date="1574969999154" expanded="true" signature="1598:1603" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plano_body.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -850,20 +813,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/WWW/qualidade/ger_sol_ans.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3168">
-          <caret line="182" column="24" lean-forward="false" selection-start-line="182" selection-start-column="24" selection-end-line="188" selection-end-column="25" />
-          <folding>
-            <marker date="1466616205921" expanded="true" signature="10038:10767" ph="SELECT date_... solicitacao" />
-            <marker date="1466616205921" expanded="true" signature="29716:30158" ph="SELECT empre... solicitacao" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/WWW/qualidade/set_sol_uar.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
+        <state relative-caret-position="-5188">
           <caret line="83" column="160" lean-forward="true" selection-start-line="83" selection-start-column="160" selection-end-line="83" selection-end-column="247" />
           <folding>
             <marker date="1466617471225" expanded="true" signature="10121:10576" ph="SELECT parec... parecer" />
@@ -877,10 +829,62 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://D:/WWW/qualidade/sol_mes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5021">
+          <caret line="30" column="41" lean-forward="true" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
+          <folding>
+            <marker date="1454692837165" expanded="true" signature="486:949" ph="SELECT slt_c... solicitacao" />
+            <marker date="1454692837165" expanded="true" signature="1410:2329" ph="insert into parecer... " />
+            <marker date="1454692837165" expanded="true" signature="2464:3120" ph="UPDATE solic... " />
+            <marker date="1454692837165" expanded="true" signature="8102:8568" ph="SELECT slt_c... solicitacao" />
+            <marker date="1454692837165" expanded="true" signature="8677:9218" ph="SELECT slt_c... solicitacao" />
+            <marker date="1454692837165" expanded="true" signature="9327:9868" ph="SELECT slt_c... solicitacao" />
+            <marker date="1454692837165" expanded="true" signature="9977:10593" ph="SELECT slt_c... solicitacao" />
+            <marker date="1454692837165" expanded="true" signature="12982:13388" ph="SELECT slt_c... solicitacao" />
+            <marker date="1454692837165" expanded="true" signature="13497:13966" ph="SELECT slt_c... solicitacao" />
+            <marker date="1454692837165" expanded="true" signature="14075:14544" ph="SELECT slt_c... solicitacao" />
+            <marker date="1454692837165" expanded="true" signature="14653:15209" ph="SELECT slt_c... solicitacao" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pagamento_visoes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="10" lean-forward="false" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#center#0;n#!!top" expanded="true" />
+            <marker date="1574969999154" expanded="true" signature="412:659" ph="SELECT pag_c... sm_pagamentos" />
+            <marker date="1574969999154" expanded="true" signature="412:669" ph="SELECT pag_c... sm_pagamentos" />
+            <marker date="1574969999154" expanded="true" signature="412:702" ph="SELECT pag_c... sm_pagamentos" />
+            <marker date="1574969999154" expanded="true" signature="412:703" ph="SELECT pag_c... sm_pagamentos" />
+            <marker date="1574969999154" expanded="true" signature="412:713" ph="SELECT pag_c... sm_pagamentos" />
+            <marker date="1574969999154" expanded="true" signature="412:778" ph="SELECT pag_c... sm_pagamentos" />
+            <marker date="1574969999154" expanded="true" signature="851:856" ph="..." />
+            <marker date="1574969999154" expanded="true" signature="1006:1053" ph="..." />
+            <marker date="1574969999154" expanded="true" signature="1006:1136" ph="..." />
+            <marker date="1574969999154" expanded="true" signature="1006:1504" ph="..." />
+            <marker date="1574969999154" expanded="true" signature="1598:1603" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/WWW/qualidade/ger_sol_ans.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="61" column="38" lean-forward="false" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="38" />
+          <folding>
+            <marker date="1466616205921" expanded="true" signature="10038:10767" ph="SELECT date_... solicitacao" />
+            <marker date="1466616205921" expanded="true" signature="29716:30158" ph="SELECT empre... solicitacao" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pagamento_body2.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="249" column="139" lean-forward="false" selection-start-line="249" selection-start-column="139" selection-end-line="249" selection-end-column="139" />
+        <state relative-caret-position="317">
+          <caret line="257" column="81" lean-forward="false" selection-start-line="257" selection-start-column="81" selection-end-line="257" selection-end-column="81" />
           <folding>
             <element signature="n#style#0;n#table#0;n#form#0;n#center#0;n#!!top" expanded="true" />
             <element signature="e#348#354#0#HTML" expanded="true" />
@@ -888,31 +892,39 @@
             <element signature="n#style#0;n#table#0;n#center#0;n#center#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#table#0;n#center#1;n#center#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#table#0;n#center#2;n#center#0;n#!!top" expanded="true" />
-            <marker date="1574989872766" expanded="true" signature="3685:3690" ph="..." />
-            <marker date="1574989872766" expanded="false" signature="3975:4093" ph="..." />
-            <marker date="1574989872766" expanded="true" signature="4721:4726" ph="..." />
-            <marker date="1574989872766" expanded="true" signature="5218:5393" ph="SELECT pag_c... sm_pagamentos" />
-            <marker date="1574989872766" expanded="true" signature="5218:5394" ph="SELECT pag_c... sm_pagamentos" />
-            <marker date="1574989872766" expanded="true" signature="5488:5493" ph="..." />
-            <marker date="1574989872766" expanded="true" signature="5759:5962" ph="SELECT pag_d... sm_pagamentos" />
-            <marker date="1574989872766" expanded="true" signature="6039:6044" ph="..." />
-            <marker date="1574989872766" expanded="true" signature="6471:6476" ph="..." />
-            <marker date="1574989872766" expanded="true" signature="7005:7180" ph="SELECT pag_c... sm_pagamentos" />
-            <marker date="1574989872766" expanded="true" signature="7005:7181" ph="SELECT pag_c... sm_pagamentos" />
-            <marker date="1574989872766" expanded="true" signature="7275:7280" ph="..." />
-            <marker date="1574989872766" expanded="true" signature="7546:7840" ph="SELECT pag_d... sm_pagamentos" />
-            <marker date="1574989872766" expanded="true" signature="7917:7922" ph="..." />
-            <marker date="1574989872766" expanded="true" signature="8347:8352" ph="..." />
-            <marker date="1574989872766" expanded="true" signature="9396:9572" ph="SELECT pag_c... sm_pagamentos" />
-            <marker date="1574989872766" expanded="true" signature="9666:9671" ph="..." />
-            <marker date="1574989872766" expanded="true" signature="9976:10174" ph="SELECT pag_d... sm_pagamentos" />
-            <marker date="1574989872766" expanded="true" signature="9976:10228" ph="SELECT pag_d... sm_pagamentos" />
-            <marker date="1574989872766" expanded="true" signature="9976:10313" ph="SELECT pag_d... sm_pagamentos" />
-            <marker date="1574989872766" expanded="true" signature="9976:10353" ph="SELECT pag_d... sm_pagamentos" />
-            <marker date="1574989872766" expanded="true" signature="10465:10470" ph="..." />
-            <marker date="1574989872766" expanded="true" signature="10815:10854" ph="..." />
-            <marker date="1574989872766" expanded="true" signature="10815:11360" ph="..." />
-            <marker date="1574989872766" expanded="true" signature="11499:11504" ph="..." />
+            <marker date="1574990760775" expanded="true" signature="3685:3690" ph="..." />
+            <marker date="1574990760775" expanded="false" signature="3975:4093" ph="..." />
+            <marker date="1574990760775" expanded="true" signature="4721:4726" ph="..." />
+            <marker date="1574990760775" expanded="true" signature="5218:5393" ph="SELECT pag_c... sm_pagamentos" />
+            <marker date="1574990760775" expanded="true" signature="5218:5394" ph="SELECT pag_c... sm_pagamentos" />
+            <marker date="1574990760775" expanded="true" signature="5488:5493" ph="..." />
+            <marker date="1574990760775" expanded="true" signature="5759:5962" ph="SELECT pag_d... sm_pagamentos" />
+            <marker date="1574990760775" expanded="true" signature="6039:6044" ph="..." />
+            <marker date="1574990760775" expanded="true" signature="6471:6476" ph="..." />
+            <marker date="1574990760775" expanded="true" signature="7005:7180" ph="SELECT pag_c... sm_pagamentos" />
+            <marker date="1574990760775" expanded="true" signature="7005:7181" ph="SELECT pag_c... sm_pagamentos" />
+            <marker date="1574990760775" expanded="true" signature="7275:7280" ph="..." />
+            <marker date="1574990760775" expanded="true" signature="7546:7840" ph="SELECT pag_d... sm_pagamentos" />
+            <marker date="1574990760775" expanded="true" signature="7917:7922" ph="..." />
+            <marker date="1574990760775" expanded="true" signature="8347:8352" ph="..." />
+            <marker date="1574990760775" expanded="true" signature="9396:9572" ph="SELECT pag_c... sm_pagamentos" />
+            <marker date="1574990760775" expanded="true" signature="9666:9671" ph="..." />
+            <marker date="1574990760775" expanded="true" signature="9984:10170" ph="SELECT pag_d... sm_pagamentos" />
+            <marker date="1574990760775" expanded="true" signature="9984:10224" ph="SELECT pag_d... sm_pagamentos" />
+            <marker date="1574990760775" expanded="true" signature="9984:10309" ph="SELECT pag_d... sm_pagamentos" />
+            <marker date="1574990760775" expanded="true" signature="9984:10345" ph="SELECT pag_d... sm_pagamentos" />
+            <marker date="1574990760775" expanded="true" signature="10453:10458" ph="..." />
+            <marker date="1574990760775" expanded="true" signature="10875:11096" ph="SELECT pag_d... sm_pagamentos" />
+            <marker date="1574990760775" expanded="true" signature="11239:11244" ph="..." />
+            <marker date="1574990760775" expanded="true" signature="11508:11547" ph="..." />
+            <marker date="1574990760775" expanded="true" signature="11508:11638" ph="..." />
+            <marker date="1574990760775" expanded="true" signature="11508:11700" ph="..." />
+            <marker date="1574990760775" expanded="true" signature="11508:11762" ph="..." />
+            <marker date="1574990760775" expanded="true" signature="11508:11824" ph="..." />
+            <marker date="1574990760775" expanded="true" signature="11508:11948" ph="..." />
+            <marker date="1574990760775" expanded="true" signature="11508:12010" ph="..." />
+            <marker date="1574990760775" expanded="true" signature="11508:12053" ph="..." />
+            <marker date="1574990760775" expanded="true" signature="12192:12197" ph="..." />
           </folding>
         </state>
       </provider>

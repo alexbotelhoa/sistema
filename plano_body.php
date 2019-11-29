@@ -86,7 +86,6 @@ if (isset($_POST['add']) or isset($_POST['alt'])) {
                     ?>
                 </tr>
             </table>
-
             <br>
             <table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse; vertical-align: middle; font-size: 12px; font-family: Verdana, Arial, Helvetica, sans-serif">
                 <tr height="30" bgcolor="#f0f8ff">
@@ -97,11 +96,7 @@ if (isset($_POST['add']) or isset($_POST['alt'])) {
                 </tr>
                 <?php
                 $sql = "SELECT * FROM sm_planos ORDER BY plan_nome ASC";
-
-
                 $consulta=mysqli_query($con, $sql) or die ("<font style=Arial color=red>Houve um erro na consulta dos dados</font>"); $x="1";
-
-
 
                 while ($dados = mysqli_fetch_array($consulta)) {
                     echo "<tr>

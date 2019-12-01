@@ -1,7 +1,6 @@
 <center>
     <br>
-
-    <form action='pagamento.php' method='POST'>
+    <form action='pagamento3.php' method='POST'>
         <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; vertical-align: middle; font-size: 12px; font-family: Verdana, Arial, Helvetica, sans-serif">
             <tr height="50" bgcolor="#f0f8ff">
                 <td width="40" align="right">Mês&nbsp;</td>
@@ -41,17 +40,36 @@
     if (isset($_POST['search'])) {
         if ($_POST['mes'] == "0" or $_POST['ano'] == "0") {
             echo "<br><br><font style='Arial' size='3' color='red'>Você NÃO selecionou um MÊS e/ou um ANO!<br><br><br>";
-            echo "<meta http-equiv='refresh' content='2;URL=pagamento.php'>";
+            echo "<meta http-equiv='refresh' content='2;URL=pagamento3.php'>";
         } else {
     ?>
-    
+
+
+
+
+    <table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse; vertical-align: middle; font-size: 12px; font-family: Verdana, Arial, Helvetica, sans-serif">
+        <tr height="30" bgcolor="#f0f8ff">
+            <td width='60' align="center">ID</td>
+            <td width='60' align="center">Mês-6</td>
+            <td width='60' align="center">Mês-5</td>
+            <td width='60' align="center">Mês-4</td>
+            <td width='60' align="center">Mês-3</td>
+            <td width='60' align="center">Mês-2</td>
+            <td width='60' align="center">Mês-1</td>
+            <td width='60' align="center">Mês-0</td>
+        </tr>
+
+
+
+
+
         <?php
             $sql = "
                 SELECT pag_cliente_id, count(1) as qtd
                 FROM sm_pagamentos
                 GROUP BY pag_cliente_id
                 ORDER BY pag_cliente_id
-                LIMIT 10
+                LIMIT 15, 5
                 ";
             $consulta = mysqli_query($con, $sql) or die ("<font style=Arial color=red>Houve um erro na consulta 1 dos dados</font>"); $xx=0;
             $Tmrr0=0; $Tnew0=0; $Texpan0=0; $Tresur0=0; $Tcontr0=0; $Tcance0=0; $Tmrr1=0; $Tnew1=0; $Texpan1=0; $Tresur1=0; $Tcontr1=0; $Tcance1=0;
@@ -60,32 +78,31 @@
 
                 //echo $dados['pag_cliente_id']." | ".$dados['qtd']."<br>";
 
-                for ($x=8;$x>0;$x--) {
+                for ($x=7;$x>0;$x--) {
                     $sql2 = "
                       SELECT pag_data, pag_reco, pag_pago 
                       FROM sm_pagamentos 
                       WHERE pag_cliente_id = $dados[pag_cliente_id] AND 
-                      MONTH(pag_data) = MONTH(ADDDATE('".$_POST['ano']."-".$_POST['mes']."-01', INTERVAL -".($x-1)." MONTH)) AND YEAR(pag_data) = YEAR(ADDDATE('".$_POST['ano']."-".$_POST['mes']."-01', INTERVAL -".($x-1)." MONTH))         
+                      MONTH(pag_data) = MONTH(ADDDATE('".$_POST['ano']."-".$_POST['mes']."-01', INTERVAL -".($x-1)." MONTH)) AND YEAR(pag_data) = YEAR(ADDDATE('".$_POST['ano']."-".$_POST['mes']."-31', INTERVAL -".($x-1)." MONTH))         
                       ";
                     $consulta2=mysqli_query($con, $sql2) or die ("<font style=Arial color=red>Houve um erro na consulta 2 dos dados</font>");
                     $dados2 = mysqli_fetch_array($consulta2);
 
-                    //echo $x." | ".$dados2['pag_data']." | ".$dados2['pag_reco']."<br>";
+                    //echo $x." | ".$dados2['pag_data']." | ".$dados2['pag_reco']." | ".$dados2['pag_pago']."<br>";
 
                     if ($dados2['pag_data']!="") {
-
-                        $mm = ($dados2['pag_pago']/$dados2['pag_reco']);
+                        $mm = round(($dados2['pag_pago']/$dados2['pag_reco']),2);
 
                         switch ($dados2['pag_reco']) {
-                            case 1: $r[($x-1)]=$mm; break;
-                            case 2: $r[($x-1)]=$r[($x-2)]=$mm; break;
-                            case 3: $r[($x-1)]=$r[($x-2)]=$r[($x-3)]=$mm; break;
-                            case 4: $r[($x-1)]=$r[($x-2)]=$r[($x-3)]=$r[($x-4)]=$mm; break;
-                            case 5: $r[($x-1)]=$r[($x-2)]=$r[($x-3)]=$r[($x-4)]=$r[($x-5)]=$mm; break;
-                            case 6: $r[($x-1)]=$r[($x-2)]=$r[($x-3)]=$r[($x-4)]=$r[($x-5)]=$r[($x-6)]=$mm; break;
+                            case 1: $r[($x-1)]=$mm.$dados2['pag_reco']; break;
+                            case 2: $r[($x-1)]=$r[($x-2)]=$mm.$dados2['pag_reco']; break;
+                            case 3: $r[($x-1)]=$r[($x-2)]=$r[($x-3)]=$mm.$dados2['pag_reco']; break;
+                            case 4: $r[($x-1)]=$r[($x-2)]=$r[($x-3)]=$r[($x-4)]=$mm.$dados2['pag_reco']; break;
+                            case 5: $r[($x-1)]=$r[($x-2)]=$r[($x-3)]=$r[($x-4)]=$r[($x-5)]=$mm.$dados2['pag_reco']; break;
+                            case 6: $r[($x-1)]=$r[($x-2)]=$r[($x-3)]=$r[($x-4)]=$r[($x-5)]=$r[($x-6)]=$mm.$dados2['pag_reco']; break;
                         }
                     } else {
-                        if ($x == 8) {
+                        if ($x == 7) {
                             $r[($x - 1)] = 0;
                         } else {
                             if ($r[$x] != 0) {
@@ -96,6 +113,24 @@
                         }
                     }
                 }
+
+
+
+
+
+                echo "<tr>
+                        <td align='center'>" . $dados['pag_cliente_id'] . "</td>
+                        <td align='center'>" . $r[6]. "</td>
+                        <td align='center'>" . $r[5]. "</td>
+                        <td align='center'>" . $r[4]. "</td>
+                        <td align='center'>" . $r[3]. "</td>
+                        <td align='center'>" . $r[2]. "</td>
+                        <td align='center'>" . $r[1]. "</td>
+                        <td align='center'>" . $r[0]. "</td>
+                    </tr>";
+
+
+
 
 
 
@@ -113,8 +148,6 @@
                 if ($contr0 < 0){$contr0=$contr0*-1;}$Tcontr0 = $Tcontr0 + $contr0;
                 $Tcance0 = $Tcance0 + $cance0;
 
-
-
                 if ($r[1]!=0) {$mrr1=$r[1];} else {$mrr1=0;}
                 if ($r[2]==0 and $dados['qtd']==1 and $r[1]>0) {$new1=$r[1];} else {$new1=0;}
                 if ($r[2]!=0 and $r[1]!=0 and $r[2]<$r[1]) {$expan1=$r[1]-$r[2];} else {$expan1=0;}
@@ -129,33 +162,11 @@
                 if ($contr1 < 0){$contr1=$contr1*-1;}$Tcontr1 = $Tcontr1 + $contr1;
                 $Tcance1 = $Tcance1 + $cance1;
 
-
-
-/*
-                echo "  <tr>
-                        <td align='center'>".$dados['pag_cliente_id']." | ".$dados['qtd']."</td>
-                        <td align='center'>".$r[7]."</td>
-                        <td align='center'>".$r[6]."</td>
-                        <td align='center'>".$r[5]."</td>
-                        <td align='center'>".$r[4]."</td>
-                        <td align='center'>".$r[3]."</td>
-                        <td align='center'>".$r[2]."</td>
-                        <td align='center'>".$r[1]."</td>
-                        <td align='center'>".$r[0]."</td>
-                        <td align='center' bgcolor='#CAF1F8'>".$mrr0."</td>
-                        <td align='center' bgcolor='#CAF1F8'>".$new0."</td>
-                        <td align='center' bgcolor='#CAF1F8'>".$expan0."</td>
-                        <td align='center' bgcolor='#CAF1F8'>".$resur0."</td>
-                        <td align='center' bgcolor='#CAF1F8'>".$contr0."</td>
-                        <td align='center' bgcolor='#CAF1F8'>".$cance0."</td>
-                    </tr>";
-*/
-
                 $xx++;
             } mysqli_free_result($consulta);
             mysqli_close($con); if ($xx==0) {echo "<br><br><font style='Arial' size='3' color='red'>Não há dados de pagamentos nesses período!<br><br><br>";}
         ?>
-<!--    </table>-->
+    </table>
     <table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse; vertical-align: middle; font-size: 12px; font-family: Verdana, Arial, Helvetica, sans-serif">
         <tr height="30" bgcolor="#f0f8ff">
             <td width='150' align="center">Métricas</td>
@@ -200,19 +211,7 @@
             <td align="center"><?php echo $Tcance0-$Tcance1; ?></td>
         </tr>
     </table>
-
-
 </center>
-
-
-
-
-
-
-
-
-
-
 <?php
         }
     } else {

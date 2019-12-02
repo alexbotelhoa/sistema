@@ -46,14 +46,6 @@ if (isset($_POST['add']) or isset($_POST['alt'])) {
         $valor = "";
     }
     ?>
-    <script type="text/javascript">
-        function confirma(id) {
-            var confimar = confirm("Não é possível deletar esse plano por haver vínculos com outros registros!");
-            if(confirmar){
-                window.location = 'plano.php';
-            }
-        }
-    </script>
     <center>
         <font color="red" size="2">*Campos em vermelho são obrigatórios*</font>
         <form name="form" action='plano.php<?php if (isset($_GET['id'])) {echo "?id=".$_GET['id']."";} ?>' method='POST'>

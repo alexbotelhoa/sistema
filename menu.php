@@ -8,7 +8,7 @@
                 <ul>
                     <li><a href="plano.php">Planos</a></li>
                     <li><a href="pagamento.php">Pagamentos</a></li>
-                    <li><a href="estatisticas.php">Estatísticas</a></li>
+                    <li><a href="estatistica.php">Estatísticas</a></li>
                 </ul>
             </li>
             <li><a href="#">Links</a>

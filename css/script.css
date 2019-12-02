@@ -47,13 +47,13 @@ td.rodape {
     background: #F8F303;
     height: 3%;
 }
-.menu{background:#CAF1F8; list-style:none; border:1px solid #c0c0c0; display: inline-block;}
-.menu li{position:relative; float:left; border-right:1px solid #c0c0c0; width: 150px;}
+.menu{background:#CAF1F8; list-style:none; border:1px solid #9AD2F1; display: inline-block;}
+.menu li{position:relative; float:left; border-right:1px solid #9AD2F1; width: 150px;}
 .menu li a{color:#333; text-decoration:none; padding: 5px 25px; display:block;}
 .menu li a:hover{background:#1564C1; color:#fff; -moz-box-shadow:0 3px 10px 0 #8FE0FD; -webkit-box-shadow:0 3px 10px 0 #8FE0FD; text-shadow:0px 0px 5px #fff;}
 .menu li ul{position:absolute; top:29px; left:0; background-color:#CAF1F8; display:none;}
 .menu li:hover ul, .menu li.over ul{display:block;}
-.menu li ul li{border:1px solid #c0c0c0; display:block; width:150px;}
+.menu li ul li{border:1px solid #9AD2F1; display:block; width:150px;}
 
 input.button {
     width: 100px;
@@ -74,3 +74,4 @@ input[type=text], input[type=email] {
 input[type=text]:focus, input[type=email]:focus {
     border-color: #1A232E;
 }
+

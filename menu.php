@@ -6,9 +6,9 @@
             <li><a href="sobre.php">Sobre</a></li>
             <li><a href="#">Menu</a>
                 <ul>
-                    <li><a href="produto.php">Produtos</a></li>
-                    <li><a href="venda.php">Vendas</a></li>
-                    <li><a href="registro.php">Regitros</a></li>
+                    <li><a href="plano.php">Planos</a></li>
+                    <li><a href="pagamento.php">Pagamentos</a></li>
+                    <li><a href="estatistica.php">Estatísticas</a></li>
                 </ul>
             </li>
             <li><a href="#">Links</a>

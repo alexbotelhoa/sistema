@@ -1,5 +1,9 @@
+<?php
+include 'conexao.php';
+include 'funcoes.php';
+?>
 <html>
-<title>Comercial Hallyz</title>
+<title>Gestão Empresarial</title>
 
 <link href="imagens/site/favicon.ico?v=635754092185370000" rel="shortcut icon" xmlns="http://www.w3.org/1999/xhtml">
 <link href="imagens/site/favicon.ico?v=635754092185370000" rel="apple-touch-icon" xmlns="http://www.w3.org/1999/xhtml">
@@ -16,5 +20,6 @@
 <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="js/jquery.mask.min.js"></script>
 <script type="text/javascript" src="js/mask.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
 
 <div id="header"><img border="0" src="imagens/site/banner_header.jpg"></div>

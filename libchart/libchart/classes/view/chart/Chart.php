@@ -1,6 +1,6 @@
 <?php
     /* Libchart - PHP chart library
-     * Copyright (C) 2005-2011 Jean-Marc Trémeaux (jm.tremeaux at gmail.com)
+     * Copyright (C) 2005-2011 Jean-Marc Trï¿½meaux (jm.tremeaux at gmail.com)
      * 
      * This program is free software: you can redistribute it and/or modify
      * it under the terms of the GNU General Public License as published by
@@ -27,19 +27,19 @@
     /**
      * Base chart class.
      *
-     * @author Jean-Marc Trémeaux (jm.tremeaux at gmail.com)
+     * @author Jean-Marc Trï¿½meaux (jm.tremeaux at gmail.com)
      */
     abstract class Chart {
         /**
          * The chart configuration.
          */
         protected $config;
-    
+
         /**
          * The data set.
          */
         protected $dataSet;
-    
+
         /**
          * Plot (holds graphical attributes).
          */
@@ -54,7 +54,7 @@
         protected function Chart($width, $height) {
             // Initialize the configuration
             $this->config = new ChartConfig();
-            
+
             // Creates the plot
             $this->plot = new Plot($width, $height);
             $this->plot->setTitle("Untitled chart");
@@ -69,10 +69,10 @@
             if (!$this->dataSet) {
                 die("Error: No dataset defined.");
             }
-            
+
             // Maybe no points are defined, but that's ok. This will yield and empty graph with default boundaries.
         }
-        
+
         /**
          * Create the image.
          */
@@ -88,7 +88,7 @@
         public function setDataSet($dataSet) {
             $this->dataSet = $dataSet;
         }
-        
+
         /**
          * Return the chart configuration.
          *
@@ -97,7 +97,7 @@
         public function getConfig() {
             return $this->config;
         }
-        
+
         /**
          * Return the plot.
          *
@@ -106,7 +106,7 @@
         public function getPlot() {
             return $this->plot;
         }
-        
+
         /**
          * Sets the title.
          *
@@ -116,4 +116,185 @@
             $this->plot->setTitle($title);
         }
     }
+
+
+
+
+
+
+    abstract class ChartEstat {
+        /**
+         * The chart configuration.
+         */
+        protected $config;
+
+        /**
+         * The data set.
+         */
+        protected $dataSet;
+
+        /**
+         * Plot (holds graphical attributes).
+         */
+        protected $plot;
+
+        /**
+         * Abstract constructor of Chart.
+         *
+         * @param integer width of the image
+         * @param integer height of the image
+         */
+        protected function ChartEstat($width, $height) {
+            // Initialize the configuration
+            $this->config = new ChartConfig();
+
+            // Creates the plot
+            $this->plot = new PlotEstat($width, $height);
+            $this->plot->setTitle("Untitled chart");
+            $this->plot->setLogoFileName(dirname(__FILE__) . "/../../../images/PoweredBy.png");
+        }
+
+        /**
+         * Checks the data model before rendering the graph.
+         */
+        protected function checkDataModel() {
+            // Check if a dataset was defined
+            if (!$this->dataSet) {
+                die("Error: No dataset defined.");
+            }
+
+            // Maybe no points are defined, but that's ok. This will yield and empty graph with default boundaries.
+        }
+
+        /**
+         * Create the image.
+         */
+        protected function createImage() {
+            $this->plot->createImage();
+        }
+
+        /**
+         * Sets the data set.
+         *
+         * @param dataSet The data set
+         */
+        public function setDataSet($dataSet) {
+            $this->dataSet = $dataSet;
+        }
+
+        /**
+         * Return the chart configuration.
+         *
+         * @return configuration : ChartConfig
+         */
+        public function getConfig() {
+            return $this->config;
+        }
+
+        /**
+         * Return the plot.
+         *
+         * @return plot
+         */
+        public function getPlot() {
+            return $this->plot;
+        }
+
+        /**
+         * Sets the title.
+         *
+         * @param string New title
+         */
+        public function setTitle($title) {
+            $this->plot->setTitle($title);
+        }
+    }
+
+    abstract class ChartEstat2 {
+    /**
+     * The chart configuration.
+     */
+    protected $config;
+
+    /**
+     * The data set.
+     */
+    protected $dataSet;
+
+    /**
+     * Plot (holds graphical attributes).
+     */
+    protected $plot;
+
+    /**
+     * Abstract constructor of Chart.
+     *
+     * @param integer width of the image
+     * @param integer height of the image
+     */
+    protected function ChartEstat2($width, $height) {
+        // Initialize the configuration
+        $this->config = new ChartConfig();
+
+        // Creates the plot
+        $this->plot = new PlotEstat2($width, $height);
+        $this->plot->setTitle("Untitled chart");
+        $this->plot->setLogoFileName(dirname(__FILE__) . "/../../../images/PoweredBy.png");
+    }
+
+    /**
+     * Checks the data model before rendering the graph.
+     */
+    protected function checkDataModel() {
+        // Check if a dataset was defined
+        if (!$this->dataSet) {
+            die("Error: No dataset defined.");
+        }
+
+        // Maybe no points are defined, but that's ok. This will yield and empty graph with default boundaries.
+    }
+
+    /**
+     * Create the image.
+     */
+    protected function createImage() {
+        $this->plot->createImage();
+    }
+
+    /**
+     * Sets the data set.
+     *
+     * @param dataSet The data set
+     */
+    public function setDataSet($dataSet) {
+        $this->dataSet = $dataSet;
+    }
+
+    /**
+     * Return the chart configuration.
+     *
+     * @return configuration : ChartConfig
+     */
+    public function getConfig() {
+        return $this->config;
+    }
+
+    /**
+     * Return the plot.
+     *
+     * @return plot
+     */
+    public function getPlot() {
+        return $this->plot;
+    }
+
+    /**
+     * Sets the title.
+     *
+     * @param string New title
+     */
+    public function setTitle($title) {
+        $this->plot->setTitle($title);
+    }
+}
 ?>

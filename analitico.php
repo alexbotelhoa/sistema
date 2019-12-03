@@ -115,97 +115,91 @@ include 'funcoes.php';
 if (isset($_GET['mrr'])) {
     $chart = new HorizontalBarChart(600, 600);
     $dataSet = new XYDataSet();
-
     for ($g = 0; $g < count($seg4); $g++) {
         $dataSet->addPoint(new Point($seg4[$g][0], $seg4[$g][1]));
     }
 
     $chart->setDataSet($dataSet);
     $chart->getPlot()->setGraphPadding(new Padding(5, 50, 20, 140));
-    $chart->setTitle("Rank das Areas em Expansão");
+    $chart->setTitle("Rank das Areas em MRR");
     $chart->render("imagens/grafico/metricas_mrr.png");
 
-    echo "<img alt='Horizontal bars chart' src='imagens/grafico/metricas_mrr.png' style='border: 0px solid gray;'>";
+    echo "<img alt='Métricas SaaS' src='imagens/grafico/metricas_mrr.png' style='border: 0px solid gray;'>";
 }
 
 if (isset($_GET['new'])) {
     $chart = new HorizontalBarChart(600, 600);
     $dataSet = new XYDataSet();
-
     for ($g = 0; $g < count($seg4); $g++) {
         $dataSet->addPoint(new Point($seg4[$g][0], $seg4[$g][1]));
     }
 
     $chart->setDataSet($dataSet);
     $chart->getPlot()->setGraphPadding(new Padding(5, 50, 20, 140));
-    $chart->setTitle("Rank das Areas em Expansão");
+    $chart->setTitle("Rank das Areas em New MRR");
     $chart->render("imagens/grafico/metricas_new.png");
 
-    echo "<img alt='Horizontal bars chart' src='imagens/grafico/metricas_new.png' style='border: 0px solid gray;'>";
+    echo "<img alt='Métricas SaaS' src='imagens/grafico/metricas_new.png' style='border: 0px solid gray;'>";
 }
 
 if (isset($_GET['expan'])) {
     $chart = new HorizontalBarChart(600, 600);
     $dataSet = new XYDataSet();
-
     for ($g = 0; $g < count($seg4); $g++) {
         $dataSet->addPoint(new Point($seg4[$g][0], $seg4[$g][1]));
     }
 
     $chart->setDataSet($dataSet);
     $chart->getPlot()->setGraphPadding(new Padding(5, 50, 20, 140));
-    $chart->setTitle("Rank das Areas em Expansão");
+    $chart->setTitle("Rank das Areas em Expansion MRR");
     $chart->render("imagens/grafico/metricas_expan.png");
 
-    echo "<img alt='Horizontal bars chart' src='imagens/grafico/metricas_expan.png' style='border: 0px solid gray;'>";
+    echo "<img alt='Métricas SaaS' src='imagens/grafico/metricas_expan.png' style='border: 0px solid gray;'>";
 }
 
 if (isset($_GET['resur'])) {
     $chart = new HorizontalBarChart(600, 600);
     $dataSet = new XYDataSet();
-
     for ($g = 0; $g < count($seg4); $g++) {
         $dataSet->addPoint(new Point($seg4[$g][0], $seg4[$g][1]));
     }
 
     $chart->setDataSet($dataSet);
     $chart->getPlot()->setGraphPadding(new Padding(5, 50, 20, 140));
-    $chart->setTitle("Rank das Areas em Expansão");
+    $chart->setTitle("Rank das Areas em Resurrected MRR");
     $chart->render("imagens/grafico/metricas_resur.png");
 
-    echo "<img alt='Horizontal bars chart' src='imagens/grafico/metricas_resur.png' style='border: 0px solid gray;'>";
+    echo "<img alt='Métricas SaaS' src='imagens/grafico/metricas_resur.png' style='border: 0px solid gray;'>";
 }
 
 if (isset($_GET['contr'])) {
     $chart = new HorizontalBarChart(600, 600);
     $dataSet = new XYDataSet();
-
     for ($g = 0; $g < count($seg4); $g++) {
         $dataSet->addPoint(new Point($seg4[$g][0], $seg4[$g][1]));
     }
 
     $chart->setDataSet($dataSet);
     $chart->getPlot()->setGraphPadding(new Padding(5, 50, 20, 140));
-    $chart->setTitle("Rank das Areas em Expansão");
+    $chart->setTitle("Rank das Areas em Contraction MRR");
     $chart->render("imagens/grafico/metricas_contr.png");
 
-    echo "<img alt='Horizontal bars chart' src='imagens/grafico/metricas_contr.png' style='border: 0px solid gray;'>";
+    echo "<img alt='Métricas SaaS' src='imagens/grafico/metricas_contr.png' style='border: 0px solid gray;'>";
 }
 
 if (isset($_GET['cance'])) {
     $chart = new HorizontalBarChart(600, 600);
     $dataSet = new XYDataSet();
-
     for ($g = 0; $g < count($seg4); $g++) {
         $dataSet->addPoint(new Point($seg4[$g][0], $seg4[$g][1]));
     }
 
     $chart->setDataSet($dataSet);
     $chart->getPlot()->setGraphPadding(new Padding(5, 50, 20, 140));
-    $chart->setTitle("Rank das Areas em Expansão");
+    $chart->setTitle("Rank das Areas em Cancelled MRR");
     $chart->render("imagens/grafico/metricas_cance.png");
 
-    echo "<img alt='Horizontal bars chart' src='imagens/grafico/metricas_cance.png' style='border: 0px solid gray;'>";
+    echo "<img alt='Métricas SaaS' src='imagens/grafico/metricas_cance.png' style='border: 0px solid gray;'>";
 }
 
 ?>

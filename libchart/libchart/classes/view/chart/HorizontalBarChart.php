@@ -34,11 +34,11 @@
          * @param integer width of the image
          * @param integer height of the image
          */
-        public function HorizontalBarChart($width = 800, $height = 250) {
+        public function HorizontalBarChart($width = 600, $height = 600) {
             parent::BarChart($width, $height);
 
             $this->emptyToFullRatio = 1 / 5;
-            $this->plot->setGraphPadding(new Padding(5, 30, 30, 500));
+            $this->plot->setGraphPadding(new Padding(5, 30, 30, 50));
         }
 
         /**
@@ -97,6 +97,7 @@
     
                     $label = $point->getX();
 
+                    // posição da legenda dos item
                     $text->printText($img, $graphArea->x1 - 5, $y - $rowHeight / 2, $this->plot->getTextColor(), $label, $text->fontCondensed, $text->HORIZONTAL_RIGHT_ALIGN | $text->VERTICAL_CENTER_ALIGN);
                 }
             }

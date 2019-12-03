@@ -20,6 +20,6 @@ include 'funcoes.php';
 <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="js/jquery.mask.min.js"></script>
 <script type="text/javascript" src="js/mask.js"></script>
-<script type="text/javascript" src="js/funcoes.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
 
 <div id="header"><img border="0" src="imagens/site/banner_header.jpg"></div>

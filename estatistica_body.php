@@ -4,8 +4,8 @@
             <tr height="50" bgcolor="#f0f8ff">
                 <td width="40" align="right">Mês&nbsp;</td>
                 <td>
-                    <select name="mes">
-                        <option value="00" <?php if (isset($_POST['mes'])) {if ($_POST['mes']=='00' or $_POST['mes']=='') {echo "selected";}}?>>Selecione</option>
+                    <select name="mes" autofocus>
+                        <option value="00" >Selecione</option>
                         <option value="01" <?php if (isset($_POST['mes'])) {if ($_POST['mes']=='01') {echo "selected";}}?>>Janeiro</option>
                         <option value="02" <?php if (isset($_POST['mes'])) {if ($_POST['mes']=='02') {echo "selected";}}?>>Fevereiro</option>
                         <option value="03" <?php if (isset($_POST['mes'])) {if ($_POST['mes']=='03') {echo "selected";}}?>>Março</option>
@@ -50,6 +50,7 @@
                 ";
             $consulta = mysqli_query($con, $sql) or die ("<font style=Arial color=red>Houve um erro na consulta 1 dos dados</font>");
             $Tmrr0=0; $Tnew0=0; $Texpan0=0; $Tresur0=0; $Tcontr0=0; $Tcance0=0; $Tmrr1=0; $Tnew1=0; $Texpan1=0; $Tresur1=0; $Tcontr1=0; $Tcance1=0; $x=0;
+            $cli_mrr=array(); $cli_new=array(); $cli_expan=array(); $cli_resur=array(); $cli_contr=array(); $cli_cance=array();
             while ($dados = mysqli_fetch_array($consulta)) {
                 $mes[6]=0;$mes[5]=0;$mes[4]=0;$mes[3]=0;$mes[2]=0;$mes[1]=0;$mes[0]=0;
                 $infoPag = explode('/', $dados['informacoes']);
@@ -69,33 +70,19 @@
                     }
                 }
 
-                if ($mes[0]!=0) {$mrr0=$mes[0];} else {$mrr0=0;}
-                if ($mes[1]==0 and $dados['contador']==1 and $mes[0]>0) {$new0=$mes[0];} else {$new0=0;}
-                if ($mes[1]!=0 and $mes[0]!=0 and $mes[1]<$mes[0]) {$expan0=$mes[0]-$mes[1];} else {$expan0=0;}
-                if ($mes[1]==0 and $dados['contador']>1 and $mes[0]>0) {$resur0=$mes[0];} else {$resur0=0;}
-                if ($mes[1]!=0 and $mes[0]!=0 and $mes[1]>$mes[0]) {$contr0=$mes[0]-$mes[1];} else {$contr0=0;}
-                if ($mes[1]>0 and $mes[0]==0) {$cance0=$mes[0];} else {$cance0=0;}
+                if ($mes[0]!=0) {$Tmrr0 = $Tmrr0 + $mes[0];}
+                if ($mes[0]!=0 and $dados['contador']==1) {$Tnew0 = $Tnew0 + $mes[0];}
+                if ($mes[0]!=0 and $mes[1]!=0 and $mes[0]>$mes[1]) {$Texpan0 = $Texpan0 + ($mes[0]-$mes[1]);}
+                if ($mes[0]!=0 and $mes[1]==0 and $dados['contador']>1) {$Tresur0 = $Tresur0 + $mes[0];}
+                if ($mes[0]!=0 and $mes[1]!=0 and $mes[0]<$mes[1]) {$Tcontr0 = $Tcontr0 + ($mes[1]-$mes[0]);}
+                if ($mes[0]==0 and $mes[1]!=0) {$Tcance0 = $Tcance0 + $mes[1];}
 
-                $Tmrr0 = $Tmrr0 + $mrr0;
-                $Tnew0 = $Tnew0 + $new0;
-                if ($expan0 < 0){$expan0=$expan0*-1;}$Texpan0 = $Texpan0 + $expan0;
-                $Tresur0 = $Tresur0 + $resur0;
-                if ($contr0 < 0){$contr0=$contr0*-1;}$Tcontr0 = $Tcontr0 + $contr0;
-                $Tcance0 = $Tcance0 + $cance0;
-
-                if ($mes[1]!=0) {$mrr1=$mes[1];} else {$mrr1=0;}
-                if ($mes[2]==0 and $dados['contador']==1 and $mes[1]>0) {$new1=$mes[1];} else {$new1=0;}
-                if ($mes[2]!=0 and $mes[1]!=0 and $mes[2]<$mes[1]) {$expan1=$mes[1]-$mes[2];} else {$expan1=0;}
-                if ($mes[2]==0 and $dados['contador']>1 and $mes[1]>0) {$resur1=$mes[1];} else {$resur1=0;}
-                if ($mes[2]!=0 and $mes[1]!=0 and $mes[2]>$mes[1]) {$contr1=$mes[1]-$mes[2];} else {$contr1=0;}
-                if ($mes[2]>0 and $mes[1]==0) {$cance1=$mes[1];} else {$cance1=0;}
-
-                $Tmrr1 = $Tmrr1 + $mrr1;
-                $Tnew1 = $Tnew1 + $new1;
-                if ($expan1 < 0){$expan1=$expan1*-1;}$Texpan1 = $Texpan1 + $expan1;
-                $Tresur1 = $Tresur1 + $resur1;
-                if ($contr1 < 0){$contr1=$contr1*-1;}$Tcontr1 = $Tcontr1 + $contr1;
-                $Tcance1 = $Tcance1 + $cance1;
+                if ($mes[1]!=0) {$Tmrr1 = $Tmrr1 + $mes[1];}
+                if ($mes[1]!=0 and $dados['contador']==1) {$Tnew1 = $Tnew1 + $mes[1];}
+                if ($mes[1]!=0 and $mes[2]!=0 and $mes[1]>$mes[2]) {$Texpan1 = $Texpan1 + ($mes[1]-$mes[2]);}
+                if ($mes[1]!=0 and $mes[2]==0 and $dados['contador']>1) {$Tresur1 = $Tresur1 + $mes[1];}
+                if ($mes[1]!=0 and $mes[2]!=0 and $mes[1]<$mes[2]) {$Tcontr1 = $Tcontr1 + ($mes[2]-$mes[1]);}
+                if ($mes[1]==0 and $mes[2]!=0) {$Tcance1 = $Tcance1 + $mes[2];}
 
                 $x++;
             } mysqli_free_result($consulta); mysqli_close($con);
@@ -106,43 +93,50 @@
                     <td width='150' align="center">Métricas</td>
                     <td width='100' align="center"><?php echo date("M/Y", strtotime($_POST['ano']."-".($_POST['mes']-1)."-01 00:00:00"));?></td>
                     <td width='100' align="center"><?php echo date("M/Y", strtotime($_POST['ano']."-".$_POST['mes']."-01 00:00:00"));?></td>
-                    <td width='100' align="center">Resultado</td>
+                    <td width='100' align="center">Sintético</td>
+                    <td width='100' align="center">Analítico</td>
                 </tr>
-                <tr height="30" bgcolor="#f0f8ff">
-                    <td align="left">MRR</td>
+                <tr height="30">
+                    <td align="left">&nbsp;MRR</td>
                     <td align="center"><?php echo $Tmrr1; ?></td>
                     <td align="center"><?php echo $Tmrr0; ?></td>
                     <td align="center"><?php echo $Tmrr0-$Tmrr1; ?></td>
+                    <td width='100' align="center"><a onclick="return pesquisar('analitico.php?mrr&mes=<?php echo $_POST['mes'] ?>&ano=<?php echo $_POST['ano']?>', 520, 590)" href="#"><img src="imagens/site/src.png" title="Ver mais..."></td>
                 </tr>
-                <tr height="30" bgcolor="#f0f8ff">
-                    <td align="left">New MRR</td>
+                <tr height="30" bgcolor="#f5fcff">
+                    <td align="left">&nbsp;New MRR</td>
                     <td align="center"><?php echo $Tnew1; ?></td>
                     <td align="center"><?php echo $Tnew0; ?></td>
                     <td align="center"><?php echo $Tnew0-$Tnew1; ?></td>
+                    <td width='100' align="center"><a onclick="return pesquisar('analitico.php?new&mes=<?php echo $_POST['mes'] ?>&ano=<?php echo $_POST['ano']?>', 520, 590)" href="#"><img src="imagens/site/src.png" title="Ver mais..."></td>
                 </tr>
-                <tr height="30" bgcolor="#f0f8ff">
-                    <td align="left">Expansion MRR</td>
+                <tr height="30">
+                    <td align="left">&nbsp;Expansion MRR</td>
                     <td align="center"><?php echo $Texpan1; ?></td>
                     <td align="center"><?php echo $Texpan0; ?></td>
                     <td align="center"><?php echo $Texpan0-$Texpan1; ?></td>
+                    <td width='100' align="center"><a onclick="return pesquisar('analitico.php?expan&mes=<?php echo $_POST['mes'] ?>&ano=<?php echo $_POST['ano']?>', 520, 590)" href="#"><img src="imagens/site/src.png" title="Ver mais..."></td>
                 </tr>
-                <tr height="30" bgcolor="#f0f8ff">
-                    <td align="left">Resurrected MRR</td>
+                <tr height="30" bgcolor="#f5fcff">
+                    <td align="left">&nbsp;Resurrected MRR</td>
                     <td align="center"><?php echo $Tresur1; ?></td>
                     <td align="center"><?php echo $Tresur0; ?></td>
                     <td align="center"><?php echo $Tresur0-$Tresur1; ?></td>
+                    <td width='100' align="center"><a onclick="return pesquisar('analitico.php?resur&mes=<?php echo $_POST['mes'] ?>&ano=<?php echo $_POST['ano']?>', 520, 590)" href="#"><img src="imagens/site/src.png" title="Ver mais..."></td>
                 </tr>
-                <tr height="30" bgcolor="#f0f8ff">
-                    <td align="left">Contration MRR</td>
+                <tr height="30">
+                    <td align="left">&nbsp;Contration MRR</td>
                     <td align="center"><?php echo $Tcontr1; ?></td>
                     <td align="center"><?php echo $Tcontr0; ?></td>
                     <td align="center"><?php echo $Tcontr0-$Tcontr1; ?></td>
+                    <td width='100' align="center"><a onclick="return pesquisar('analitico.php?contr&mes=<?php echo $_POST['mes'] ?>&ano=<?php echo $_POST['ano']?>', 520, 590)" href="#"><img src="imagens/site/src.png" title="Ver mais..."></td>
                 </tr>
-                <tr height="30" bgcolor="#f0f8ff">
-                    <td align="left">Cancelled MRR</td>
+                <tr height="30" bgcolor="#f5fcff">
+                    <td align="left">&nbsp;Cancelled MRR</td>
                     <td align="center"><?php echo $Tcance1; ?></td>
                     <td align="center"><?php echo $Tcance0; ?></td>
                     <td align="center"><?php echo $Tcance0-$Tcance1; ?></td>
+                    <td width='100' align="center"><a onclick="return pesquisar('analitico.php?cance&mes=<?php echo $_POST['mes'] ?>&ano=<?php echo $_POST['ano']?>', 520, 590)" href="#"><img src="imagens/site/src.png" title="Ver mais..."></td>
                 </tr>
             </table>
             <?php

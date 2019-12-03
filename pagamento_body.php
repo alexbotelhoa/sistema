@@ -5,8 +5,8 @@
         <tr height="50" bgcolor="#f0f8ff">
             <td width="40" align="right">Mês&nbsp;</td>
             <td>
-                <select name="mes">
-                    <option value="00" <?php if (isset($_POST['mes'])) {if ($_POST['mes']=='00' or $_POST['mes']=='') {echo "selected";}}?>>Selecione</option>
+                <select name="mes" autofocus>
+                    <option value="00">Selecione</option>
                     <option value="01" <?php if (isset($_POST['mes'])) {if ($_POST['mes']=='01') {echo "selected";}}?>>Janeiro</option>
                     <option value="02" <?php if (isset($_POST['mes'])) {if ($_POST['mes']=='02') {echo "selected";}}?>>Fevereiro</option>
                     <option value="03" <?php if (isset($_POST['mes'])) {if ($_POST['mes']=='03') {echo "selected";}}?>>Março</option>

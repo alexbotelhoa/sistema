@@ -1,9 +1,8 @@
-<link href="./css/script.css" rel="stylesheet" type="text/css" xmlns="http://www.w3.org/1999/xhtml">
+<!--<link href="./css/script.css" rel="stylesheet" type="text/css" xmlns="http://www.w3.org/1999/xhtml">-->
 <div id="menu">
     <nav>
         <ul class="menu">
             <li><a href="index.php">Home</a></li>
-            <li><a href="sobre.php">Sobre</a></li>
             <li><a href="#">Menu</a>
                 <ul>
                     <li><a href="plano.php">Planos</a></li>
@@ -18,6 +17,7 @@
                 </ul>
             </li>
             <li><a href="contato.php">Contato</a></li>
+            <li><a href="sobre.php">Sobre</a></li>
         </ul>
     </nav>
 </div>

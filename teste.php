@@ -1,23 +1,45 @@
-<?php
-$url = "https://demo4417994.mockable.io/clientes/";
-$clientes = json_decode(file_get_contents($url));
 
-echo $clientes[0]->id." | ".$clientes[0]->nome." | ".$clientes[0]->cidade." | ".$clientes[0]->estado." | ".$clientes[0]->segmento."<br>";
-echo "<pre>";
+<html>
+<title>Gestão Empresarial</title>
 
-$cli_base = array(10=>[11,12],20=>[21,22],30=>[31,32],40=>[41,42],50=>[51,52]);
-print_r($cli_base);
+<link href="imagens/site/favicon.ico?v=635754092185370000" rel="shortcut icon" xmlns="http://www.w3.org/1999/xhtml">
+    <link href="imagens/site/favicon.ico?v=635754092185370000" rel="apple-touch-icon" xmlns="http://www.w3.org/1999/xhtml">
 
-$a = "10,30,50";
-$b = explode(",",$a);
-$cli_canc = array();
-for ($x=0;$x<count($b);$x++) {
-    $cli_canc[$b[$x]] = 0;
-}
-print_r($cli_canc);
+    <meta name="description" content="O Comercial Hallyz é um mercado de produtos Nacionais e Importados.">
+    <meta name="Abstract" content="Hallyz Comércio e Industria Ltda">
+    <meta name="author" content="Comercial Hallyz">
+    <meta name="copyright" content="Comercial Hallyz">
+    <meta name="vtex-version" content="1.0.0000.0000">
+    <meta http-equiv="pragma" content="no-cache">
+
+<link href="./css/script.css" rel="stylesheet" type="text/css" xmlns="http://www.w3.org/1999/xhtml">
+
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.mask.min.js"></script>
+<script type="text/javascript" src="js/mask.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+
+<body>
+
+<div class="content">
+
+    <div id="header"><img border="0" src="imagens/site/banner_header.jpg"></div>
+
+    <?php
+    include 'menu.php';
+    include 'index_body.php';
+    ?>
+
+</div>
+
+<footer class="footer">
+    Footer
+</footer>
 
 
-$allkeys = array_replace($cli_canc, array_intersect_key($clientes, $cli_canc));
-print_r($allkeys);
 
-?>
+
+
+
+
+</body>

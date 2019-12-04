@@ -1,8 +1,9 @@
+<br>
 <?php
 if (isset($_POST['add']) or isset($_POST['alt'])) {
     if ($_POST['nome'] == "" or $_POST['valor'] == "") {
         echo "<br><br><br><br><br>";
-        echo "<center><font style='Arial' size='3' color='red'>Campos obrigatórios sem preenchimento!</font><br>";
+        echo "<center><font style='Arial' size='3' color='red'>Campos obrigatórios sem preenchimento!</font>";
         echo "<br><br><br><br><br>";
         echo "<meta http-equiv='refresh' content='2;URL=plano.php'>";
     } else {
@@ -15,7 +16,7 @@ if (isset($_POST['add']) or isset($_POST['alt'])) {
             mysqli_close($con);
 
             echo "<br><br><br><br><br>";
-            echo "<center><font style='Arial' size='3' color='green'>Produto adicionado com sucesso!</font><br>";
+            echo "<center><font style='Arial' size='3' color='green'>Produto adicionado com sucesso!</font>";
             echo "<br><br><br><br><br>";
             echo "<meta http-equiv='refresh' content='1;URL=plano.php'>";
         } else {
@@ -27,7 +28,7 @@ if (isset($_POST['add']) or isset($_POST['alt'])) {
             mysqli_close($con);
 
             echo "<br><br><br><br><br>";
-            echo "<center><font style='Arial' size='3' color='green'>Produto alterado com sucesso!</font><br>";
+            echo "<center><font style='Arial' size='3' color='green'>Produto alterado com sucesso!</font>";
             echo "<br><br><br><br><br>";
             echo "<meta http-equiv='refresh' content='1;URL=plano.php'>";
         }
@@ -106,3 +107,4 @@ if (isset($_POST['add']) or isset($_POST['alt'])) {
     <?php
 }
 ?>
+

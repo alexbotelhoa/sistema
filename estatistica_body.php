@@ -230,8 +230,8 @@ include "libchart/libchart/classes/libchart.php";
             $serie2->addPoint(new Point("Cance", $Tcance0));
 
             $dataSet = new XYSeriesDataSet();
-            $dataSet->addSerie(date("M/Y", strtotime($_POST['ano']."-".($_POST['mes']-1)."-01 00:00:00")), $serie1);
-            $dataSet->addSerie(date("M/Y", strtotime($_POST['ano']."-".$_POST['mes']."-01 00:00:00")), $serie2);
+            $dataSet->addSerie(date("M/Y", strtotime("-1 month",$date)), $serie1);
+            $dataSet->addSerie(date("M/Y", strtotime("-0 month",$date)), $serie2);
             $chart->setDataSet($dataSet);
             $chart->getPlot()->setGraphCaptionRatio(0.65);
 
@@ -245,8 +245,8 @@ include "libchart/libchart/classes/libchart.php";
             <table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse; vertical-align: middle; font-size: 12px; font-family: Verdana, Arial, Helvetica, sans-serif">
                 <tr height="30" bgcolor="#f0f8ff">
                     <td width='150' align="center">Métricas</td>
-                    <td width='100' align="center"><?php echo date("M/Y", strtotime($_POST['ano']."-".($_POST['mes']-1)."-01 00:00:00"));?></td>
-                    <td width='100' align="center"><?php echo date("M/Y", strtotime($_POST['ano']."-".$_POST['mes']."-01 00:00:00"));?></td>
+                    <td width='100' align="center"><?php echo date("M/Y", strtotime("-1 month",$date));?></td>
+                    <td width='100' align="center"><?php echo date("M/Y", strtotime("-0 month",$date));?></td>
                     <td width='100' align="center">Evolução</td>
                     <td width='100' align="center">Por Área</td>
                 </tr>
@@ -292,11 +292,11 @@ include "libchart/libchart/classes/libchart.php";
                     <td align="center"><?php echo $Tcance0-$Tcance1; ?></td>
                     <td width='100' align="center"><a onclick="return pesquisar('analitico.php?cance&mes=<?php echo $_POST['mes'] ?>&ano=<?php echo $_POST['ano']?>', 520, 590)" href="#"><img src="imagens/site/src.png" title="Ver mais..."></td>
                 </tr>
-            </table>
+            </table><br><br><br>
             <?php
         }
     } else {
-        echo "<br><br><font style='Arial' size='3' color='#00008b'>Escolha o um mês e um ano.<br><br><br>";
+        echo "<br><br><font style='Arial' size='3' color='#00008b'>Escolha o um mês e um ano.</font>";
     }
 ?>
 </center><br>

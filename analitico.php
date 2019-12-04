@@ -4,6 +4,7 @@
         padding: 0;
     }
 </style>
+<pre>
 <?php
 include "libchart/libchart/classes/libchart.php";
 
@@ -12,7 +13,7 @@ $baseclientes = json_decode(file_get_contents($url));
 
 include 'conexao.php';
 include 'funcoes.php';
-//echo "<pre>";
+
     $sql = "
         SELECT pag_cliente_id, GROUP_CONCAT(CONCAT_WS(',', pag_data, pag_reco, round((pag_pago/pag_reco))) ORDER BY pag_data ASC SEPARATOR '/') as informacoes, count(1) as contador
         FROM sm_pagamentos
@@ -90,10 +91,18 @@ include 'funcoes.php';
     }
 
     $cli_filtro = array_replace($cli_selec, array_intersect_key($baseclientes, $cli_selec));
+
+    //print_r($cli_filtro); die();
+
     $segmento = array(array_values($cli_filtro));
+
+    //print_r($segmento); die();
+
     for($s=0;$s<(count($segmento,1)-1);$s++) {
         $seg1[] = $segmento[0][$s]->segmento;
     }
+
+    //print_r($seg1); die();
 
     $seg2 = array_count_values($seg1);
     $seg3 = array_values(array_count_values($seg1));
@@ -112,97 +121,93 @@ include 'funcoes.php';
 
     array_multisort($sort[1], SORT_ASC, $seg4);
 
-if (isset($_GET['mrr'])) {
-    $chart = new HorizontalBarChart(600, 600);
-    $dataSet = new XYDataSet();
-    for ($g = 0; $g < count($seg4); $g++) {
-        $dataSet->addPoint(new Point($seg4[$g][0], $seg4[$g][1]));
+    if (isset($_GET['mrr'])) {
+        $chart = new HorizontalBarChart(600, 600);
+        $dataSet = new XYDataSet();
+        for ($g = 0; $g < count($seg4); $g++) {
+            $dataSet->addPoint(new Point($seg4[$g][0], $seg4[$g][1]));
+        }
+
+        $chart->setDataSet($dataSet);
+        $chart->getPlot()->setGraphPadding(new Padding(5, 50, 20, 140));
+        $chart->setTitle("Rank das Areas em MRR");
+        $chart->render("imagens/grafico/metricas_mrr.png");
+
+        echo "<img alt='Métricas SaaS' src='imagens/grafico/metricas_mrr.png' style='border: 0px solid gray;'>";
     }
 
-    $chart->setDataSet($dataSet);
-    $chart->getPlot()->setGraphPadding(new Padding(5, 50, 20, 140));
-    $chart->setTitle("Rank das Areas em MRR");
-    $chart->render("imagens/grafico/metricas_mrr.png");
+    if (isset($_GET['new'])) {
+        $chart = new HorizontalBarChart(600, 600);
+        $dataSet = new XYDataSet();
+        for ($g = 0; $g < count($seg4); $g++) {
+            $dataSet->addPoint(new Point($seg4[$g][0], $seg4[$g][1]));
+        }
 
-    echo "<img alt='Métricas SaaS' src='imagens/grafico/metricas_mrr.png' style='border: 0px solid gray;'>";
-}
+        $chart->setDataSet($dataSet);
+        $chart->getPlot()->setGraphPadding(new Padding(5, 50, 20, 140));
+        $chart->setTitle("Rank das Areas em New MRR");
+        $chart->render("imagens/grafico/metricas_new.png");
 
-if (isset($_GET['new'])) {
-    $chart = new HorizontalBarChart(600, 600);
-    $dataSet = new XYDataSet();
-    for ($g = 0; $g < count($seg4); $g++) {
-        $dataSet->addPoint(new Point($seg4[$g][0], $seg4[$g][1]));
+        echo "<img alt='Métricas SaaS' src='imagens/grafico/metricas_new.png' style='border: 0px solid gray;'>";
     }
 
-    $chart->setDataSet($dataSet);
-    $chart->getPlot()->setGraphPadding(new Padding(5, 50, 20, 140));
-    $chart->setTitle("Rank das Areas em New MRR");
-    $chart->render("imagens/grafico/metricas_new.png");
+    if (isset($_GET['expan'])) {
+        $chart = new HorizontalBarChart(600, 600);
+        $dataSet = new XYDataSet();
+        for ($g = 0; $g < count($seg4); $g++) {
+            $dataSet->addPoint(new Point($seg4[$g][0], $seg4[$g][1]));
+        }
 
-    echo "<img alt='Métricas SaaS' src='imagens/grafico/metricas_new.png' style='border: 0px solid gray;'>";
-}
+        $chart->setDataSet($dataSet);
+        $chart->getPlot()->setGraphPadding(new Padding(5, 50, 20, 140));
+        $chart->setTitle("Rank das Areas em Expansion MRR");
+        $chart->render("imagens/grafico/metricas_expan.png");
 
-if (isset($_GET['expan'])) {
-    $chart = new HorizontalBarChart(600, 600);
-    $dataSet = new XYDataSet();
-    for ($g = 0; $g < count($seg4); $g++) {
-        $dataSet->addPoint(new Point($seg4[$g][0], $seg4[$g][1]));
+        echo "<img alt='Métricas SaaS' src='imagens/grafico/metricas_expan.png' style='border: 0px solid gray;'>";
     }
 
-    $chart->setDataSet($dataSet);
-    $chart->getPlot()->setGraphPadding(new Padding(5, 50, 20, 140));
-    $chart->setTitle("Rank das Areas em Expansion MRR");
-    $chart->render("imagens/grafico/metricas_expan.png");
+    if (isset($_GET['resur'])) {
+        $chart = new HorizontalBarChart(600, 600);
+        $dataSet = new XYDataSet();
+        for ($g = 0; $g < count($seg4); $g++) {
+            $dataSet->addPoint(new Point($seg4[$g][0], $seg4[$g][1]));
+        }
 
-    echo "<img alt='Métricas SaaS' src='imagens/grafico/metricas_expan.png' style='border: 0px solid gray;'>";
-}
+        $chart->setDataSet($dataSet);
+        $chart->getPlot()->setGraphPadding(new Padding(5, 50, 20, 140));
+        $chart->setTitle("Rank das Areas em Resurrected MRR");
+        $chart->render("imagens/grafico/metricas_resur.png");
 
-if (isset($_GET['resur'])) {
-    $chart = new HorizontalBarChart(600, 600);
-    $dataSet = new XYDataSet();
-    for ($g = 0; $g < count($seg4); $g++) {
-        $dataSet->addPoint(new Point($seg4[$g][0], $seg4[$g][1]));
+        echo "<img alt='Métricas SaaS' src='imagens/grafico/metricas_resur.png' style='border: 0px solid gray;'>";
     }
 
-    $chart->setDataSet($dataSet);
-    $chart->getPlot()->setGraphPadding(new Padding(5, 50, 20, 140));
-    $chart->setTitle("Rank das Areas em Resurrected MRR");
-    $chart->render("imagens/grafico/metricas_resur.png");
+    if (isset($_GET['contr'])) {
+        $chart = new HorizontalBarChart(600, 600);
+        $dataSet = new XYDataSet();
+        for ($g = 0; $g < count($seg4); $g++) {
+            $dataSet->addPoint(new Point($seg4[$g][0], $seg4[$g][1]));
+        }
 
-    echo "<img alt='Métricas SaaS' src='imagens/grafico/metricas_resur.png' style='border: 0px solid gray;'>";
-}
+        $chart->setDataSet($dataSet);
+        $chart->getPlot()->setGraphPadding(new Padding(5, 50, 20, 140));
+        $chart->setTitle("Rank das Areas em Contraction MRR");
+        $chart->render("imagens/grafico/metricas_contr.png");
 
-if (isset($_GET['contr'])) {
-    $chart = new HorizontalBarChart(600, 600);
-    $dataSet = new XYDataSet();
-    for ($g = 0; $g < count($seg4); $g++) {
-        $dataSet->addPoint(new Point($seg4[$g][0], $seg4[$g][1]));
+        echo "<img alt='Métricas SaaS' src='imagens/grafico/metricas_contr.png' style='border: 0px solid gray;'>";
     }
 
-    $chart->setDataSet($dataSet);
-    $chart->getPlot()->setGraphPadding(new Padding(5, 50, 20, 140));
-    $chart->setTitle("Rank das Areas em Contraction MRR");
-    $chart->render("imagens/grafico/metricas_contr.png");
+    if (isset($_GET['cance'])) {
+        $chart = new HorizontalBarChart(600, 600);
+        $dataSet = new XYDataSet();
+        for ($g = 0; $g < count($seg4); $g++) {
+            $dataSet->addPoint(new Point($seg4[$g][0], $seg4[$g][1]));
+        }
 
-    echo "<img alt='Métricas SaaS' src='imagens/grafico/metricas_contr.png' style='border: 0px solid gray;'>";
-}
+        $chart->setDataSet($dataSet);
+        $chart->getPlot()->setGraphPadding(new Padding(5, 50, 20, 140));
+        $chart->setTitle("Rank das Areas em Cancelled MRR");
+        $chart->render("imagens/grafico/metricas_cance.png");
 
-if (isset($_GET['cance'])) {
-    $chart = new HorizontalBarChart(600, 600);
-    $dataSet = new XYDataSet();
-    for ($g = 0; $g < count($seg4); $g++) {
-        $dataSet->addPoint(new Point($seg4[$g][0], $seg4[$g][1]));
+        echo "<img alt='Métricas SaaS' src='imagens/grafico/metricas_cance.png' style='border: 0px solid gray;'>";
     }
-
-    $chart->setDataSet($dataSet);
-    $chart->getPlot()->setGraphPadding(new Padding(5, 50, 20, 140));
-    $chart->setTitle("Rank das Areas em Cancelled MRR");
-    $chart->render("imagens/grafico/metricas_cance.png");
-
-    echo "<img alt='Métricas SaaS' src='imagens/grafico/metricas_cance.png' style='border: 0px solid gray;'>";
-}
-
 ?>
-
-
-

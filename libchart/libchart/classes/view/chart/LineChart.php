@@ -380,9 +380,9 @@
      * @param integer width of the image
      * @param integer height of the image
      */
-    public function LineChartEstat2($width = 600, $height = 250) {
+    public function LineChartEstat2($width = 600, $height = 300) {
         parent::BarChartEstat2($width, $height);
-        $this->plot->setGraphPadding(new Padding(5, 30, 60, 0));
+        $this->plot->setGraphPadding(new Padding(5, 20, 60, -10));
     }
 
     /**

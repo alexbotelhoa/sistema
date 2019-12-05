@@ -7,10 +7,6 @@
 <pre>
 <?php
 include "libchart/libchart/classes/libchart.php";
-
-$url = "https://demo4417994.mockable.io/clientes/";
-$baseclientes = json_decode(file_get_contents($url));
-
 include 'conexao.php';
 include 'funcoes.php';
 
@@ -22,37 +18,93 @@ include 'funcoes.php';
         ORDER BY pag_cliente_id ASC
     ";
     $consulta = mysqli_query($con, $sql) or die ("<font style=Arial color=red>Houve um erro na consulta 1 dos dados</font>");
-    $Tmrr0=0; $Tnew0=0; $Texpan0=0; $Tresur0=0; $Tcontr0=0; $Tcance0=0; $Tmrr1=0; $Tnew1=0; $Texpan1=0; $Tresur1=0; $Tcontr1=0; $Tcance1=0; $x=0;
-    $cli_mrr=array(); $cli_new=array(); $cli_expan=array(); $cli_resur=array(); $cli_contr=array(); $cli_cance=array();
+
+    $Tmrr0=0;
+    $Tnew0=0;
+    $Texpan0=0;
+    $Tresur0=0;
+    $Tcontr0=0;
+    $Tcance0=0;
+    $Tmrr1=0;
+    $Tnew1=0;
+    $Texpan1=0;
+    $Tresur1=0;
+    $Tcontr1=0;
+    $Tcance1=0; $x=0;
+
+    $cli_selec = array();
+    $cli_mrr=array();
+    $cli_new=array();
+    $cli_expan=array();
+    $cli_resur=array();
+    $cli_contr=array();
+    $cli_cance=array();
+
     while ($dados = mysqli_fetch_array($consulta)) {
-        $mes[6]=0;$mes[5]=0;$mes[4]=0;$mes[3]=0;$mes[2]=0;$mes[1]=0;$mes[0]=0;
+        $mes[6] = 0;
+        $mes[5] = 0;
+        $mes[4] = 0;
+        $mes[3] = 0;
+        $mes[2] = 0;
+        $mes[1] = 0;
+        $mes[0] = 0;
         $infoPag = explode('/', $dados['informacoes']);
 
-        for ($d=0;$d<count($infoPag);$d++) {
+        for ($d = 0; $d < count($infoPag); $d++) {
             $infoDados = explode(',', $infoPag[$d]);
-            $dia = explode('-',$infoDados[0]);
-            $diff = dataDiff($infoDados[0],$_GET['ano'].'-'.$_GET['mes'].'-'.$dia[2]);
+            $dia = explode('-', $infoDados[0]);
+            $diff = dataDiff($infoDados[0], $_GET['ano'] . '-' . $_GET['mes'] . '-' . $dia[2]);
 
             switch ($infoDados[1]) {
-                case 1: $mes[$diff]=$infoDados[2]; break;
-                case 2: $mes[$diff]=$mes[($diff-1)]=$infoDados[2]; break;
-                case 3: $mes[$diff]=$mes[($diff-1)]=$mes[($diff-2)]=$infoDados[2]; break;
-                case 4: $mes[$diff]=$mes[($diff-1)]=$mes[($diff-2)]=$mes[($diff-3)]=$infoDados[2]; break;
-                case 5: $mes[$diff]=$mes[($diff-1)]=$mes[($diff-2)]=$mes[($diff-3)]=$mes[($diff-4)]=$infoDados[2]; break;
-                case 6: $mes[$diff]=$mes[($diff-1)]=$mes[($diff-2)]=$mes[($diff-3)]=$mes[($diff-4)]=$mes[($diff-5)]=$infoDados[2]; break;
+                case 1:
+                    $mes[$diff] = $infoDados[2];
+                    break;
+                case 2:
+                    $mes[$diff] = $mes[($diff - 1)] = $infoDados[2];
+                    break;
+                case 3:
+                    $mes[$diff] = $mes[($diff - 1)] = $mes[($diff - 2)] = $infoDados[2];
+                    break;
+                case 4:
+                    $mes[$diff] = $mes[($diff - 1)] = $mes[($diff - 2)] = $mes[($diff - 3)] = $infoDados[2];
+                    break;
+                case 5:
+                    $mes[$diff] = $mes[($diff - 1)] = $mes[($diff - 2)] = $mes[($diff - 3)] = $mes[($diff - 4)] = $infoDados[2];
+                    break;
+                case 6:
+                    $mes[$diff] = $mes[($diff - 1)] = $mes[($diff - 2)] = $mes[($diff - 3)] = $mes[($diff - 4)] = $mes[($diff - 5)] = $infoDados[2];
+                    break;
             }
         }
 
-        if ($mes[0]!=0) {$cli_mrr[] = $dados[0]; $Tmrr0 = $Tmrr0 + $mes[0];}
-        if ($mes[0]!=0 and $dados['contador']==1) {$cli_new[] = $dados[0]; $Tnew0 = $Tnew0 + $mes[0];}
-        if ($mes[0]!=0 and $mes[1]!=0 and $mes[0]>$mes[1]) {$cli_expan[] = $dados[0]; $Texpan0 = $Texpan0 + ($mes[0]-$mes[1]);}
-        if ($mes[0]!=0 and $mes[1]==0 and $dados['contador']>1) {$cli_resur[] = $dados[0]; $Tresur0 = $Tresur0 + $mes[0];}
-        if ($mes[0]!=0 and $mes[1]!=0 and $mes[0]<$mes[1]) {$cli_contr[] = $dados[0]; $Tcontr0 = $Tcontr0 + ($mes[1]-$mes[0]);}
-        if ($mes[0]==0 and $mes[1]!=0) {$cli_cance[] = $dados[0]; $Tcance0 = $Tcance0 + $mes[1];}
+        if ($mes[0] != 0) {
+            $cli_mrr[] = $dados[0];
+            $Tmrr0 = $Tmrr0 + $mes[0];
+        }
+        if ($mes[0] != 0 and $dados['contador'] == 1) {
+            $cli_new[] = $dados[0];
+            $Tnew0 = $Tnew0 + $mes[0];
+        }
+        if ($mes[0] != 0 and $mes[1] != 0 and $mes[0] > $mes[1]) {
+            $cli_expan[] = $dados[0];
+            $Texpan0 = $Texpan0 + ($mes[0] - $mes[1]);
+        }
+        if ($mes[0] != 0 and $mes[1] == 0 and $dados['contador'] > 1) {
+            $cli_resur[] = $dados[0];
+            $Tresur0 = $Tresur0 + $mes[0];
+        }
+        if ($mes[0] != 0 and $mes[1] != 0 and $mes[0] < $mes[1]) {
+            $cli_contr[] = $dados[0];
+            $Tcontr0 = $Tcontr0 + ($mes[1] - $mes[0]);
+        }
+        if ($mes[0] == 0 and $mes[1] != 0) {
+            $cli_cance[] = $dados[0];
+            $Tcance0 = $Tcance0 + $mes[1];
+        }
         $x++;
-    } mysqli_free_result($consulta); mysqli_close($con);
-
-    $cli_selec = array(); $cli_sele = array(); $cli_sele = array(); $cli_sele = array(); $cli_sele = array(); $cli_sele = array();
+    }
+    mysqli_free_result($consulta);
+    mysqli_close($con);
 
     if (isset($_GET['mrr'])) {
         for ($x = 0; $x < count($cli_mrr); $x++) {
@@ -90,32 +142,27 @@ include 'funcoes.php';
         }
     }
 
+    $url = "https://demo4417994.mockable.io/clientes/";
+    $baseclientes = json_decode(file_get_contents($url));
+
     $cli_filtro = array_replace($cli_selec, array_intersect_key($baseclientes, $cli_selec));
-
-    //print_r($cli_filtro); die();
-
     $segmento = array(array_values($cli_filtro));
-
-    //print_r($segmento); die();
-
-    for($s=0;$s<(count($segmento,1)-1);$s++) {
+    for ($s = 0; $s < (count($segmento, 1) - 1); $s++) {
         $seg1[] = $segmento[0][$s]->segmento;
     }
-
-    //print_r($seg1); die();
-
     $seg2 = array_count_values($seg1);
     $seg3 = array_values(array_count_values($seg1));
 
-    $d=0;
+    $d = 0;
     while (current($seg2)) {
-        $seg4[] = [key($seg2),$seg3[$d]];
-        next($seg2); $d++;
+        $seg4[] = [key($seg2), $seg3[$d]];
+        next($seg2);
+        $d++;
     }
 
     $sort = array();
     foreach ($seg4 as $key => $row) {
-        $sort[0][$key]  = $row[0];
+        $sort[0][$key] = $row[0];
         $sort[1][$key] = $row[1];
     }
 

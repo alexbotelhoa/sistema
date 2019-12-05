@@ -2,26 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b2c35de-6b57-4236-be2d-8cfc93a4bca4" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagens/site/Gestão Empresarial.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagens/site/Gestão Empresarial_files/banner_header.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagens/site/Gestão Empresarial_files/copyright.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagens/site/Gestão Empresarial_files/jquery-3.4.1.min.js.download" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagens/site/Gestão Empresarial_files/jquery.mask.min.js.download" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagens/site/Gestão Empresarial_files/mask.js.download" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagens/site/Gestão Empresarial_files/quadro_mrr.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagens/site/Gestão Empresarial_files/script.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagens/site/Gestão Empresarial_files/script.js.download" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagens/site/Gestão Empresarial_files/src.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagens/site/teste.php.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/teste.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/script.css" afterPath="$PROJECT_DIR$/css/script.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/estatistica_body.php" afterPath="$PROJECT_DIR$/estatistica_body.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/funcoes.php" afterPath="$PROJECT_DIR$/funcoes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/header.php" afterPath="$PROJECT_DIR$/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imagens/index.html" afterPath="$PROJECT_DIR$/imagens/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imagens/site/index.html" afterPath="$PROJECT_DIR$/imagens/site/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plano_body.php" afterPath="$PROJECT_DIR$/plano_body.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/imagens/site/pagina_desenvolvimento_1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/imagens/site/pagina_desenvolvimento_2.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sobre_body.php" afterPath="$PROJECT_DIR$/sobre_body.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,7 +14,28 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="menu.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/menu.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="23" column="10" lean-forward="false" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sobre_body.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sobre_body.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="595">
+              <caret line="35" column="8" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -136,7 +139,6 @@
         <option value="$PROJECT_DIR$/libchart/libchart/classes/view/primitive/Primitive.php" />
         <option value="$PROJECT_DIR$/libchart/libchart/classes/view/primitive/Padding.php" />
         <option value="$PROJECT_DIR$/libchart/libchart/classes/view/text/Text.php" />
-        <option value="$PROJECT_DIR$/sobre_body.php" />
         <option value="$PROJECT_DIR$/conexao.php" />
         <option value="$PROJECT_DIR$/estatistica_body.php" />
         <option value="$PROJECT_DIR$/funcoes.php" />
@@ -145,6 +147,7 @@
         <option value="$PROJECT_DIR$/pagamento_body.php" />
         <option value="$PROJECT_DIR$/plano_body.php" />
         <option value="$PROJECT_DIR$/css/script.css" />
+        <option value="$PROJECT_DIR$/sobre_body.php" />
       </list>
     </option>
   </component>
@@ -277,17 +280,18 @@
       <workItem from="1574888282201" duration="87000" />
       <workItem from="1574896505131" duration="193495000" />
       <workItem from="1575456900492" duration="34100000" />
-      <workItem from="1575540764468" duration="2968000" />
+      <workItem from="1575540764468" duration="3859000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="335950000" />
+    <option name="totallyTimeSpent" value="336841000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11510417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11510417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921812" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -584,14 +588,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="10" lean-forward="false" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -604,14 +600,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="56" lean-forward="false" selection-start-line="1" selection-start-column="56" selection-end-line="1" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sobre_body.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="31" lean-forward="true" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -695,6 +683,22 @@
             <marker date="1575543042670" expanded="true" signature="4538:4543" ph="..." />
             <marker date="1575543042670" expanded="true" signature="14285:14290" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="10" lean-forward="false" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sobre_body.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="8" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>

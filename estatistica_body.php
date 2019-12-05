@@ -37,7 +37,7 @@
         </table>
     </form>
 <?php
-include "libchart/libchart/classes/libchart.php";
+include './libchart/libchart/classes/libchart.php';
 
     if (isset($_POST['search'])) {
         if ($_POST['mes'] == "0" or $_POST['ano'] == "0") {

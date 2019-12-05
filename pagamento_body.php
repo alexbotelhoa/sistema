@@ -37,8 +37,6 @@
     </table>
 </form><br>
 <?php
-
-
     if (isset($_POST['search'])) {
         if ($_POST['mes'] == "0" or $_POST['ano'] == "0") {
             echo "<br><br><font style='Arial' size='3' color='red'>Você NÃO selecionou um MÊS e/ou um ANO!</font>";

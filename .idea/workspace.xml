@@ -1,47 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9b2c35de-6b57-4236-be2d-8cfc93a4bca4" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagens/produto/10658793652254.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagens/produto/10724512956446.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagens/produto/11996758310942.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagens/produto/12437229961246.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagens/produto/13084402712606.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagens/produto/13322034642974.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagens/produto/14198986276894.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagens/produto/14399585943582.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagens/produto/9234222055454.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagens/produto/9319620902942.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagens/produto/9445701419038.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagens/produto/9445789401118.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagens/produto/9445789728798.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagens/produto/9454953070622.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagens/produto/9516926205982.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imagens/produto/index.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imagens/grafico/evolucao_mrr.png" afterPath="$PROJECT_DIR$/imagens/grafico/evolucao_mrr.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imagens/grafico/quadro_mrr.png" afterPath="$PROJECT_DIR$/imagens/grafico/quadro_mrr.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/estatistica_body.php" afterPath="$PROJECT_DIR$/estatistica_body.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libchart/libchart/classes/libchart.php" afterPath="$PROJECT_DIR$/libchart/libchart/classes/libchart.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libchart/libchart/classes/model/ChartConfig.php" afterPath="$PROJECT_DIR$/libchart/libchart/classes/model/ChartConfig.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libchart/libchart/classes/model/DataSet.php" afterPath="$PROJECT_DIR$/libchart/libchart/classes/model/DataSet.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libchart/libchart/classes/model/Point.php" afterPath="$PROJECT_DIR$/libchart/libchart/classes/model/Point.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libchart/libchart/classes/model/XYDataSet.php" afterPath="$PROJECT_DIR$/libchart/libchart/classes/model/XYDataSet.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libchart/libchart/classes/model/XYSeriesDataSet.php" afterPath="$PROJECT_DIR$/libchart/libchart/classes/model/XYSeriesDataSet.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libchart/libchart/classes/view/axis/Axis.php" afterPath="$PROJECT_DIR$/libchart/libchart/classes/view/axis/Axis.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libchart/libchart/classes/view/axis/Bound.php" afterPath="$PROJECT_DIR$/libchart/libchart/classes/view/axis/Bound.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libchart/libchart/classes/view/caption/Caption.php" afterPath="$PROJECT_DIR$/libchart/libchart/classes/view/caption/Caption.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libchart/libchart/classes/view/chart/PieChart.php" afterPath="$PROJECT_DIR$/libchart/libchart/classes/view/chart/PieChart.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libchart/libchart/classes/view/color/Color.php" afterPath="$PROJECT_DIR$/libchart/libchart/classes/view/color/Color.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libchart/libchart/classes/view/color/ColorSet.php" afterPath="$PROJECT_DIR$/libchart/libchart/classes/view/color/ColorSet.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libchart/libchart/classes/view/color/Palette.php" afterPath="$PROJECT_DIR$/libchart/libchart/classes/view/color/Palette.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libchart/libchart/classes/view/primitive/Padding.php" afterPath="$PROJECT_DIR$/libchart/libchart/classes/view/primitive/Padding.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libchart/libchart/classes/view/primitive/Primitive.php" afterPath="$PROJECT_DIR$/libchart/libchart/classes/view/primitive/Primitive.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libchart/libchart/classes/view/primitive/Rectangle.php" afterPath="$PROJECT_DIR$/libchart/libchart/classes/view/primitive/Rectangle.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libchart/libchart/classes/view/text/Text.php" afterPath="$PROJECT_DIR$/libchart/libchart/classes/view/text/Text.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pagamento_body.php" afterPath="$PROJECT_DIR$/pagamento_body.php" />
-    </list>
+    <list default="true" id="9b2c35de-6b57-4236-be2d-8cfc93a4bca4" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -294,12 +254,12 @@
       <workItem from="1574855282787" duration="3568000" />
       <workItem from="1574888282201" duration="87000" />
       <workItem from="1574896505131" duration="193495000" />
-      <workItem from="1575456900492" duration="34043000" />
+      <workItem from="1575456900492" duration="34100000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="332925000" />
+    <option name="totallyTimeSpent" value="332982000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />

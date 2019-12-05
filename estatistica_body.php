@@ -1,9 +1,10 @@
 <center><br>
     <form action='estatistica.php' method='POST'>
+        <font color="#00008b" size="2">Escolha um mês e um ano</font>
         <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; vertical-align: middle; font-size: 12px; font-family: Verdana, Arial, Helvetica, sans-serif">
-            <tr height="50" bgcolor="#f0f8ff">
+            <tr height="40" bgcolor="#f0f8ff">
                 <td width="40" align="right">Mês&nbsp;</td>
-                <td>
+                <td width="90" align="center">
                     <select name="mes" autofocus>
                         <option value="00" >Selecione</option>
                         <option value="01" <?php if (isset($_POST['mes'])) {if ($_POST['mes']=='01') {echo "selected";}}?>>Janeiro</option>
@@ -21,7 +22,7 @@
                     </select>
                 </td>
                 <td width="40" align="right">Ano&nbsp;</td>
-                <td>
+                <td width="90" align="center">
                     <select name="ano">
                         <option value="0000" <?php if (isset($_POST['ano'])) {if ($_POST['ano']=='0000' or $_POST['ano']=='') {echo "selected";}}?>>Selecione</option>
                         <option value="2019" <?php if (isset($_POST['ano'])) {if ($_POST['ano']=='2019') {echo "selected";}}?>>2019</option>
@@ -31,12 +32,12 @@
                         <option value="2015" <?php if (isset($_POST['ano'])) {if ($_POST['ano']=='2015') {echo "selected";}}?>>2015</option>
                     </select>
                 </td>
-                <td width="140" align='center'><input type='hidden' name='search' value='0'><input class='button' type='Submit' value='Buscar'></td>
+                <td width="130" align='center'><input type='hidden' name='search' value='0'><input class='button' type='Submit' value='Buscar'></td>
             </tr>
         </table>
     </form>
 <?php
-include "libchart/libchart/classes/libchart.php";
+include './libchart/libchart/classes/libchart.php';
 
     if (isset($_POST['search'])) {
         if ($_POST['mes'] == "0" or $_POST['ano'] == "0") {
@@ -230,14 +231,14 @@ include "libchart/libchart/classes/libchart.php";
             $serie2->addPoint(new Point("Cance", $Tcance0));
 
             $dataSet = new XYSeriesDataSet();
-            $dataSet->addSerie(date("M/Y", strtotime($_POST['ano']."-".($_POST['mes']-1)."-01 00:00:00")), $serie1);
-            $dataSet->addSerie(date("M/Y", strtotime($_POST['ano']."-".$_POST['mes']."-01 00:00:00")), $serie2);
+            $dataSet->addSerie(date("M/Y", strtotime("-1 month",$date)), $serie1);
+            $dataSet->addSerie(date("M/Y", strtotime("-0 month",$date)), $serie2);
             $chart->setDataSet($dataSet);
             $chart->getPlot()->setGraphCaptionRatio(0.65);
 
             $chart->setTitle("Quadro Comparativo Mensal (R$)");
                 $chart->render("imagens/grafico/quadro_mrr.png");
-            ?>
+            ?><br>
             <img alt='Métricas SaaS' src='imagens/grafico/evolucao_mrr.png' style='border: 1px solid gray;'>
             <br><br>
             <img alt='Métricas SaaS' src='imagens/grafico/quadro_mrr.png' style='border: 1px solid gray;'>
@@ -245,8 +246,8 @@ include "libchart/libchart/classes/libchart.php";
             <table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse; vertical-align: middle; font-size: 12px; font-family: Verdana, Arial, Helvetica, sans-serif">
                 <tr height="30" bgcolor="#f0f8ff">
                     <td width='150' align="center">Métricas</td>
-                    <td width='100' align="center"><?php echo date("M/Y", strtotime($_POST['ano']."-".($_POST['mes']-1)."-01 00:00:00"));?></td>
-                    <td width='100' align="center"><?php echo date("M/Y", strtotime($_POST['ano']."-".$_POST['mes']."-01 00:00:00"));?></td>
+                    <td width='100' align="center"><?php echo date("M/Y", strtotime("-1 month",$date));?></td>
+                    <td width='100' align="center"><?php echo date("M/Y", strtotime("-0 month",$date));?></td>
                     <td width='100' align="center">Evolução</td>
                     <td width='100' align="center">Por Área</td>
                 </tr>
@@ -292,11 +293,11 @@ include "libchart/libchart/classes/libchart.php";
                     <td align="center"><?php echo $Tcance0-$Tcance1; ?></td>
                     <td width='100' align="center"><a onclick="return pesquisar('analitico.php?cance&mes=<?php echo $_POST['mes'] ?>&ano=<?php echo $_POST['ano']?>', 520, 590)" href="#"><img src="imagens/site/src.png" title="Ver mais..."></td>
                 </tr>
-            </table>
+            </table><br><br><br>
             <?php
         }
     } else {
-        echo "<br><br><font style='Arial' size='3' color='#00008b'>Escolha o um mês e um ano.<br><br><br>";
+        echo "<br><br><img src='imagens/site/estatistica.png'>";
     }
 ?>
 </center><br>

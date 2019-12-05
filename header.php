@@ -2,8 +2,8 @@
 include 'conexao.php';
 include 'funcoes.php';
 ?>
-<html>
-<title>Gestão Empresarial</title>
+<!DOCTYPE html>
+<title>Gestão de Pagamentos</title>
 
 <link href="imagens/site/favicon.ico?v=635754092185370000" rel="shortcut icon" xmlns="http://www.w3.org/1999/xhtml">
 <link href="imagens/site/favicon.ico?v=635754092185370000" rel="apple-touch-icon" xmlns="http://www.w3.org/1999/xhtml">
@@ -22,4 +22,9 @@ include 'funcoes.php';
 <script type="text/javascript" src="js/mask.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 
-<div id="header"><img border="0" src="imagens/site/banner_header.jpg"></div>
+
+<body>
+    <div class="content">
+        <div id="header"><img border="0" src="imagens/site/banner_header.jpg"></div>
+
+

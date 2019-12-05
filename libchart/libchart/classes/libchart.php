@@ -1,6 +1,6 @@
 <?php
     /* Libchart - PHP chart library
-     * Copyright (C) 2005-2011 Jean-Marc Trémeaux (jm.tremeaux at gmail.com)
+     * Copyright (C) 2005-2011 Jean-Marc TrÃ©meaux (jm.tremeaux at gmail.com)
      * 
      * This program is free software: you can redistribute it and/or modify
      * it under the terms of the GNU General Public License as published by
@@ -22,7 +22,6 @@
     require_once 'model/DataSet.php';
     require_once 'model/XYDataSet.php';
     require_once 'model/XYSeriesDataSet.php';
-    
     require_once 'view/primitive/Padding.php';
     require_once 'view/primitive/Rectangle.php';
     require_once 'view/primitive/Primitive.php';

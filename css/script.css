@@ -83,13 +83,19 @@ div.sobre {
     background-color: #f0f8ff;
 }
 
-div.sobreI {
-    text-align: justify;
-    background-color: #f0f8ff;
+div.sobreT {
+    text-align: center;
 }
 
-ul.sobre, li.sobre {
-    margin: 40px;
+div.sobreI {
+    text-align: justify;
+}
+div.sobreIFS {
+    padding: 0px 0px 0px 50px;
+    text-align: justify;
+}
+
+ul.sobreIFS, li.sobreIFS {
     padding: 0px 0px 0px 5px;
     font-size: 100%;
     font-weight: normal;

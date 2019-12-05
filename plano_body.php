@@ -49,19 +49,24 @@ if (isset($_POST['add']) or isset($_POST['alt'])) {
     ?>
     <center>
         <font color="red" size="2">*Campos em vermelho são obrigatórios*</font>
-        <form name="form" action='plano.php<?php if (isset($_GET['id'])) {echo "?id=".$_GET['id']."";} ?>' method='POST'>
+        <form name="form" action='plano.php<?php if (isset($_GET['id'])) {
+            echo "?id=" . $_GET['id'] . "";
+        } ?>' method='POST'>
             <table border="0" cellspacing="0" cellpadding="0">
                 <tr>
                     <td height="40" bgcolor="#f0f8ff" align="center">Cadastro de Plano</td>
                 </tr>
                 <tr>
                     <td height="40">
-                        <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; vertical-align: middle; font-size: 12px; font-family: Verdana, Arial, Helvetica, sans-serif">
+                        <table border="0" cellpadding="0" cellspacing="0"
+                               style="border-collapse: collapse; vertical-align: middle; font-size: 12px; font-family: Verdana, Arial, Helvetica, sans-serif">
                             <tr height="30">
                                 <td width="80" align="right"><font color="red">Nome:</font></td>
-                                <td width="140"><input type="text" name="nome" maxlength="20" size="14" value="<?php echo $nome ?>"></td>
+                                <td width="140"><input type="text" name="nome" maxlength="20" size="14"
+                                                       value="<?php echo $nome ?>"></td>
                                 <td width="80" align="right"><font color="red">Valor:</font></td>
-                                <td width="90"><input type="text" class="money" name="valor" maxlength="8" size="5" value="<?php echo $valor ?>"></td>
+                                <td width="90"><input type="text" class="money" name="valor" maxlength="8" size="5"
+                                                      value="<?php echo $valor ?>"></td>
                             </tr>
                         </table>
                     </td>
@@ -80,7 +85,8 @@ if (isset($_POST['add']) or isset($_POST['alt'])) {
                 </tr>
             </table>
             <br>
-            <table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse; vertical-align: middle; font-size: 12px; font-family: Verdana, Arial, Helvetica, sans-serif">
+            <table border="1" cellpadding="0" cellspacing="0"
+                   style="border-collapse: collapse; vertical-align: middle; font-size: 12px; font-family: Verdana, Arial, Helvetica, sans-serif">
                 <tr height="30" bgcolor="#f0f8ff">
                     <td width="140">&nbsp;&nbsp;Nome do Plano</td>
                     <td width="80" align="center">Valor (R$)</td>
@@ -88,16 +94,19 @@ if (isset($_POST['add']) or isset($_POST['alt'])) {
                 </tr>
                 <?php
                 $sql = "SELECT * FROM sm_planos ORDER BY plan_nome ASC";
-                $consulta=mysqli_query($con, $sql) or die ("<font style=Arial color=red>Houve um erro na consulta dos dados</font>"); $x="1";
+                $consulta = mysqli_query($con, $sql) or die ("<font style=Arial color=red>Houve um erro na consulta dos dados</font>");
+                $x = "1";
 
                 while ($dados = mysqli_fetch_array($consulta)) {
                     echo "<tr>
-                    <td>&nbsp;&nbsp;".utf8_encode($dados['plan_nome'])."</td>
-                    <td align='center'>".number_format($dados['plan_valor'], 2, ',', '.')."</td>
-                    <td align='center'><a href='plano.php?id=".$dados['plan_id']."'><img src='imagens/site/alt.png'></a></td>
+                    <td>&nbsp;&nbsp;" . utf8_encode($dados['plan_nome']) . "</td>
+                    <td align='center'>" . number_format($dados['plan_valor'], 2, ',', '.') . "</td>
+                    <td align='center'><a href='plano.php?id=" . $dados['plan_id'] . "'><img src='imagens/site/alt.png'></a></td>
                     <td align='center'><img onclick='confirma(50)' src='imagens/site/del.png'></td>
                 </tr>";
-                    $x++;} mysqli_close($con);
+                    $x++;
+                }
+                mysqli_close($con);
                 ?>
             </table>
             <br>

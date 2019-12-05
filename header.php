@@ -22,9 +22,6 @@ include 'funcoes.php';
 <script type="text/javascript" src="js/mask.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 
-
 <body>
     <div class="content">
         <div id="header"><img border="0" src="imagens/site/banner_header.jpg"></div>
-
-

@@ -12,8 +12,10 @@
             </li>
             <li><a href="#">Links</a>
                 <ul>
-                    <li><a href="https://www.linkedin.com/in/alex-botelho-almeida/">LinkedIn</a></li>
-                    <li><a href="https://www.facebook.com/alexbotelho.dealmeida">FaceBook</a></li>
+                    <li><a href="https://www.linkedin.com/in/alex-botelho-almeida/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://www.github.com/alexbotelhoa/" target="_blank">GitHub</a></li>
+                    <li><a href="https://www.facebook.com/alexbotelhoa/" target="_blank">FaceBook</a></li>
+                    <li><a href="https://www.instagram.com/alexbotelhoa/" target="_blank">Instagram</a></li>
                 </ul>
             </li>
             <li><a href="contato.php">Contato</a></li>

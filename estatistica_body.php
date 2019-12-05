@@ -1,9 +1,10 @@
 <center><br>
     <form action='estatistica.php' method='POST'>
+        <font color="#00008b" size="2">Escolha um mês e um ano</font>
         <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; vertical-align: middle; font-size: 12px; font-family: Verdana, Arial, Helvetica, sans-serif">
-            <tr height="50" bgcolor="#f0f8ff">
+            <tr height="40" bgcolor="#f0f8ff">
                 <td width="40" align="right">Mês&nbsp;</td>
-                <td>
+                <td width="90" align="center">
                     <select name="mes" autofocus>
                         <option value="00" >Selecione</option>
                         <option value="01" <?php if (isset($_POST['mes'])) {if ($_POST['mes']=='01') {echo "selected";}}?>>Janeiro</option>
@@ -21,7 +22,7 @@
                     </select>
                 </td>
                 <td width="40" align="right">Ano&nbsp;</td>
-                <td>
+                <td width="90" align="center">
                     <select name="ano">
                         <option value="0000" <?php if (isset($_POST['ano'])) {if ($_POST['ano']=='0000' or $_POST['ano']=='') {echo "selected";}}?>>Selecione</option>
                         <option value="2019" <?php if (isset($_POST['ano'])) {if ($_POST['ano']=='2019') {echo "selected";}}?>>2019</option>
@@ -31,7 +32,7 @@
                         <option value="2015" <?php if (isset($_POST['ano'])) {if ($_POST['ano']=='2015') {echo "selected";}}?>>2015</option>
                     </select>
                 </td>
-                <td width="140" align='center'><input type='hidden' name='search' value='0'><input class='button' type='Submit' value='Buscar'></td>
+                <td width="130" align='center'><input type='hidden' name='search' value='0'><input class='button' type='Submit' value='Buscar'></td>
             </tr>
         </table>
     </form>
@@ -237,7 +238,7 @@ include "libchart/libchart/classes/libchart.php";
 
             $chart->setTitle("Quadro Comparativo Mensal (R$)");
                 $chart->render("imagens/grafico/quadro_mrr.png");
-            ?>
+            ?><br>
             <img alt='Métricas SaaS' src='imagens/grafico/evolucao_mrr.png' style='border: 1px solid gray;'>
             <br><br>
             <img alt='Métricas SaaS' src='imagens/grafico/quadro_mrr.png' style='border: 1px solid gray;'>
@@ -296,7 +297,7 @@ include "libchart/libchart/classes/libchart.php";
             <?php
         }
     } else {
-        echo "<br><br><font style='Arial' size='3' color='#00008b'>Escolha o um mês e um ano.</font>";
+        echo "<br><br><img src='imagens/site/estatistica.png'>";
     }
 ?>
 </center><br>

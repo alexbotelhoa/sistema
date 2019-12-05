@@ -80,7 +80,12 @@ div.sobre {
     padding: 20px 20px 20px 20px;
     text-align: left;
     width: 720px;
-    background-color: #CAF1F8;
+    background-color: #f0f8ff;
+}
+
+div.sobreI {
+    text-align: justify;
+    background-color: #f0f8ff;
 }
 
 ul.sobre, li.sobre {

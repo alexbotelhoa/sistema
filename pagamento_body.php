@@ -1,10 +1,10 @@
-<center>
-<br>
+<center><br>
 <form action='pagamento.php' method='POST'>
+    <font color="#00008b" size="2">Escolha um mês e um ano</font>
     <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; vertical-align: middle; font-size: 12px; font-family: Verdana, Arial, Helvetica, sans-serif">
-        <tr height="50" bgcolor="#f0f8ff">
+        <tr height="40" bgcolor="#f0f8ff">
             <td width="40" align="right">Mês&nbsp;</td>
-            <td>
+            <td width="90" align="center">
                 <select name="mes" autofocus>
                     <option value="00">Selecione</option>
                     <option value="01" <?php if (isset($_POST['mes'])) {if ($_POST['mes']=='01') {echo "selected";}}?>>Janeiro</option>
@@ -22,7 +22,7 @@
                 </select>
             </td>
             <td width="40" align="right">Ano&nbsp;</td>
-            <td>
+            <td width="90" align="center">
                 <select name="ano">
                     <option value="0000" <?php if (isset($_POST['ano'])) {if ($_POST['ano']=='0000' or $_POST['ano']=='') {echo "selected";}}?>>Selecione</option>
                     <option value="2019" <?php if (isset($_POST['ano'])) {if ($_POST['ano']=='2019') {echo "selected";}}?>>2019</option>
@@ -32,7 +32,7 @@
                     <option value="2015" <?php if (isset($_POST['ano'])) {if ($_POST['ano']=='2015') {echo "selected";}}?>>2015</option>
                 </select>
             </td>
-            <td width="140" align='center'><input type='hidden' name='search' value='0'><input class='button' type='Submit' value='Buscar'></td>
+            <td width="130" align='center'><input type='hidden' name='search' value='0'><input class='button' type='Submit' value='Buscar'></td>
         </tr>
     </table>
 </form><br>
@@ -121,42 +121,38 @@
             <table border="1" cellpadding="0" cellspacing="0"
                    style="border-collapse: collapse; vertical-align: middle; font-size: 12px; font-family: Verdana, Arial, Helvetica, sans-serif">
                 <tr height="30" bgcolor="#f0f8ff">
-                    <td width='100' align="center">ID</td>
-                    <td width='100' align="center"><?php echo date("M/Y", strtotime("-6 month", $date)) ?></td>
-                    <td width='100' align="center"><?php echo date("M/Y", strtotime("-5 month", $date)) ?></td>
-                    <td width='100' align="center"><?php echo date("M/Y", strtotime("-4 month", $date)) ?></td>
-                    <td width='100' align="center"><?php echo date("M/Y", strtotime("-3 month", $date)) ?></td>
-                    <td width='100' align="center"><?php echo date("M/Y", strtotime("-2 month", $date)) ?></td>
-                    <td width='100' align="center"><?php echo date("M/Y", strtotime("-1 month", $date)) ?></td>
-                    <td width='100' align="center"><?php echo date("M/Y", strtotime("-0 month", $date)) ?></td>
+                    <td width='120' align="center">Nome</td>
+                    <td width='80' align="center"><?php echo date("M/Y", strtotime("-6 month", $date)) ?></td>
+                    <td width='80' align="center"><?php echo date("M/Y", strtotime("-5 month", $date)) ?></td>
+                    <td width='80' align="center"><?php echo date("M/Y", strtotime("-4 month", $date)) ?></td>
+                    <td width='80' align="center"><?php echo date("M/Y", strtotime("-3 month", $date)) ?></td>
+                    <td width='80' align="center"><?php echo date("M/Y", strtotime("-2 month", $date)) ?></td>
+                    <td width='80' align="center"><?php echo date("M/Y", strtotime("-1 month", $date)) ?></td>
+                    <td width='80' align="center"><?php echo date("M/Y", strtotime("-0 month", $date)) ?></td>
                 </tr>
                 <?php
                 for ($c = 0; $c < count($clientes); $c++) {
                     ?>
-                    <tr <?php if ($c % 2 == 1) {
+                    <tr height="20" <?php if ($c % 2 == 1) {
                         echo 'bgcolor=#f5fcff';
                     } ?>>
                         <td align='center'><?php echo $clientes[$c][0] ?></td>
-                        <td align='center'><?php echo $clientes[$c][1] ?></td>
-                        <td align='center'><?php echo $clientes[$c][2] ?></td>
-                        <td align='center'><?php echo $clientes[$c][3] ?></td>
-                        <td align='center'><?php echo $clientes[$c][4] ?></td>
-                        <td align='center'><?php echo $clientes[$c][5] ?></td>
-                        <td align='center'><?php echo $clientes[$c][6] ?></td>
-                        <td align='center'><?php echo $clientes[$c][7] ?></td>
+                        <td align='center'><?php echo number_format($clientes[$c][1], 2, ',', '.') ?></td>
+                        <td align='center'><?php echo number_format($clientes[$c][2], 2, ',', '.') ?></td>
+                        <td align='center'><?php echo number_format($clientes[$c][3], 2, ',', '.') ?></td>
+                        <td align='center'><?php echo number_format($clientes[$c][4], 2, ',', '.') ?></td>
+                        <td align='center'><?php echo number_format($clientes[$c][5], 2, ',', '.') ?></td>
+                        <td align='center'><?php echo number_format($clientes[$c][6], 2, ',', '.') ?></td>
+                        <td align='center'><?php echo number_format($clientes[$c][7], 2, ',', '.') ?></td>
                     </tr>
                     <?php
-
                 }
-
                 ?>
-
-
             </table><br><br><br>
             <?php
         }
     } else {
-        echo "<br><br><font style='Arial' size='3' color='#00008b'>Escolha o um mês e um ano.</font>";
+        echo "<br><br><img src='imagens/site/pagamento.png'>";
     }
 ?>
 </center>

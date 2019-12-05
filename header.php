@@ -3,7 +3,7 @@ include 'conexao.php';
 include 'funcoes.php';
 ?>
 <!DOCTYPE html>
-<title>Gestão Empresarial</title>
+<title>Gestão de Pagamentos</title>
 
 <link href="imagens/site/favicon.ico?v=635754092185370000" rel="shortcut icon" xmlns="http://www.w3.org/1999/xhtml">
 <link href="imagens/site/favicon.ico?v=635754092185370000" rel="apple-touch-icon" xmlns="http://www.w3.org/1999/xhtml">

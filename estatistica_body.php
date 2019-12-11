@@ -6,30 +6,33 @@
                 <td width="40" align="right">Mês&nbsp;</td>
                 <td width="90" align="center">
                     <select name="mes" autofocus>
-                        <option value="00" >Selecione</option>
-                        <option value="01" <?php if (isset($_POST['mes'])) {if ($_POST['mes']=='01') {echo "selected";}}?>>Janeiro</option>
-                        <option value="02" <?php if (isset($_POST['mes'])) {if ($_POST['mes']=='02') {echo "selected";}}?>>Fevereiro</option>
-                        <option value="03" <?php if (isset($_POST['mes'])) {if ($_POST['mes']=='03') {echo "selected";}}?>>Março</option>
-                        <option value="04" <?php if (isset($_POST['mes'])) {if ($_POST['mes']=='04') {echo "selected";}}?>>Abril</option>
-                        <option value="05" <?php if (isset($_POST['mes'])) {if ($_POST['mes']=='05') {echo "selected";}}?>>Maio</option>
-                        <option value="06" <?php if (isset($_POST['mes'])) {if ($_POST['mes']=='06') {echo "selected";}}?>>Junho</option>
-                        <option value="07" <?php if (isset($_POST['mes'])) {if ($_POST['mes']=='07') {echo "selected";}}?>>Julho</option>
-                        <option value="08" <?php if (isset($_POST['mes'])) {if ($_POST['mes']=='08') {echo "selected";}}?>>Agosto</option>
-                        <option value="09" <?php if (isset($_POST['mes'])) {if ($_POST['mes']=='09') {echo "selected";}}?>>Setembro</option>
-                        <option value="10" <?php if (isset($_POST['mes'])) {if ($_POST['mes']=='10') {echo "selected";}}?>>Outubro</option>
-                        <option value="11" <?php if (isset($_POST['mes'])) {if ($_POST['mes']=='11') {echo "selected";}}?>>Novembro</option>
-                        <option value="12" <?php if (isset($_POST['mes'])) {if ($_POST['mes']=='12') {echo "selected";}}?>>Dezembro</option>
+                        <option value="00">Selecione</option>
+                        <?php
+                        for ($mes=1;$mes<13;$mes++) { ?>
+                            <option value="<?php echo str_pad($mes, 2, '0', STR_PAD_LEFT) ?>" <?php if (isset($_POST['mes'])) {
+                                if ($_POST['mes'] == str_pad($mes, 2, '0', STR_PAD_LEFT)) {
+                                    echo "selected";
+                                }
+                            } ?>><?php echo str_ireplace($mesEN, $mesPT, date('F', strtotime("01-" . $mes . "-1970"))) ?></option>
+                            <?php
+                        }
+                        ?>
                     </select>
                 </td>
                 <td width="40" align="right">Ano&nbsp;</td>
                 <td width="90" align="center">
                     <select name="ano">
-                        <option value="0000" <?php if (isset($_POST['ano'])) {if ($_POST['ano']=='0000' or $_POST['ano']=='') {echo "selected";}}?>>Selecione</option>
-                        <option value="2019" <?php if (isset($_POST['ano'])) {if ($_POST['ano']=='2019') {echo "selected";}}?>>2019</option>
-                        <option value="2018" <?php if (isset($_POST['ano'])) {if ($_POST['ano']=='2018') {echo "selected";}}?>>2018</option>
-                        <option value="2017" <?php if (isset($_POST['ano'])) {if ($_POST['ano']=='2017') {echo "selected";}}?>>2017</option>
-                        <option value="2016" <?php if (isset($_POST['ano'])) {if ($_POST['ano']=='2016') {echo "selected";}}?>>2016</option>
-                        <option value="2015" <?php if (isset($_POST['ano'])) {if ($_POST['ano']=='2015') {echo "selected";}}?>>2015</option>
+                        <option value="0000">Selecione</option>
+                        <?php
+                        for ($ano=idate('Y');$ano>(idate('Y')-5);$ano--) { ?>
+                            <option value="<?php echo $ano ?>" <?php if (isset($_POST['ano'])) {
+                                if ($_POST['ano'] == $ano) {
+                                    echo "selected";
+                                }
+                            } ?>><?php echo $ano ?></option>
+                            <?php
+                        }
+                        ?>
                     </select>
                 </td>
                 <td width="130" align='center'><input type='hidden' name='search' value='0'><input class='button' type='Submit' value='Buscar'></td>

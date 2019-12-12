@@ -100,7 +100,7 @@ if (isset($_POST['add']) or isset($_POST['alt'])) {
                 while ($dados = mysqli_fetch_array($consulta)) {
                     echo "<tr>
                     <td>&nbsp;&nbsp;" . utf8_encode($dados['plan_nome']) . "</td>
-                    <td align='center'>" . number_format($dados['plan_valor'], 2, ',', '.') . "</td>
+                    <td align='center'>" . moeda($dados['plan_valor']) . "</td>
                     <td align='center'><a href='plano.php?id=" . $dados['plan_id'] . "'><img src='imagens/site/alt.png'></a></td>
                     <td align='center'><img onclick='confirma(50)' src='imagens/site/del.png'></td>
                 </tr>";

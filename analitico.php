@@ -10,6 +10,8 @@ include "libchart/libchart/classes/libchart.php";
 include 'conexao.php';
 include 'funcoes.php';
 
+$startTIME = timePHPProcess();
+
     $sql = "
         SELECT pag_cliente_id, GROUP_CONCAT(CONCAT_WS(',', pag_data, pag_reco, round((pag_pago/pag_reco))) ORDER BY pag_data ASC SEPARATOR '/') as informacoes, count(1) as contador
         FROM sm_pagamentos
@@ -142,10 +144,8 @@ include 'funcoes.php';
         }
     }
 
-    $url = "https://demo4417994.mockable.io/clientes/";
-    $baseclientes = json_decode(file_get_contents($url));
 
-    $cli_filtro = array_replace($cli_selec, array_intersect_key($baseclientes, $cli_selec));
+    $cli_filtro = array_replace($cli_selec, array_intersect_key($_SESSION['BASECLIENTES'], $cli_selec));
     $segmento = array(array_values($cli_filtro));
     for ($s = 0; $s < (count($segmento, 1) - 1); $s++) {
         $seg1[] = $segmento[0][$s]->segmento;
@@ -257,4 +257,9 @@ include 'funcoes.php';
 
         echo "<img alt='Métricas SaaS' src='imagens/grafico/metricas_cance.png' style='border: 0px solid gray;'>";
     }
+
+
+echo "<br><br>";
+$endTIME = timePHPProcess($startTIME);
+echo "O PHP demorou ". $endTIME ." segundos para processar.";
 ?>

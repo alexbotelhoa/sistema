@@ -1,9 +1,28 @@
 <?php
 
+session_start();
+
 $mesPT = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
 $mesEN = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
-    function dataDiff ($dataI , $dataF)
+setlocale(LC_ALL, "pt_BR", "pt_BR.utf-8", "portuguese");
+
+if (!isset($_SESSION['BASECLIENTES'])) {
+    $_SESSION['BASECLIENTES'] = json_decode(file_get_contents("https://demo4417994.mockable.io/clientes/"));
+}
+
+function timePHPProcess($start = null) {
+    $mTime = microtime(); // Pega o microtime
+    $mTime = explode(' ',$mTime); // Quebra o microtime
+    $mTime = $mTime[1] + $mTime[0]; // Soma as partes montando um valor inteiro
+
+    if ($start == null)
+        return $mTime;
+    else
+        return round($mTime - $start, 2);
+}
+
+function dataDiff ($dataI , $dataF)
     {
         $dataI = explode('-', $dataI);
         $dataF = explode('-', $dataF);
@@ -48,5 +67,10 @@ $mesEN = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'Augus
         return $ret;
 
     }
+
+    function moeda($valor) {
+        return number_format($valor, 2, ',', '.');
+    }
+
 
 ?>

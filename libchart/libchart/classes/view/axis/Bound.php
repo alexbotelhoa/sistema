@@ -67,8 +67,8 @@
             } else if ($dataSet instanceof XYSeriesDataSet) {
                 $serieList = $dataSet->getSerieList();
                 if (count($serieList) > 0) {
-                    $serie = current($serieList);
-                    $dataSetEmpty = count($serie) == 0;
+                    //$serie = current($serieList);
+                    $dataSetEmpty = count($serieList) == 0;
                 }
             } else {
                 die("Error: unknown dataset type");

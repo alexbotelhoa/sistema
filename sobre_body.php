@@ -34,3 +34,10 @@
     </div>
 </div>
 <br><br>
+
+<?php
+
+unset($_SESSION['BASECLIENTES']);
+unset($_SESSION['JSON']);
+
+?>

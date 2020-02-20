@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.6deb5
+-- version 4.9.2
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Tempo de geração: 11/12/2019 às 13:44
--- Versão do servidor: 10.3.20-MariaDB-1:10.3.20+maria~bionic-log
--- Versão do PHP: 7.2.25-1+ubuntu18.04.1+deb.sury.org+1
+-- Host: 127.0.0.1
+-- Tempo de geração: 20-Fev-2020 às 01:07
+-- Versão do servidor: 10.4.10-MariaDB
+-- versão do PHP: 7.3.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -23,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `sm_pagamentos`
+-- Estrutura da tabela `sm_pagamentos`
 --
 
 CREATE TABLE `sm_pagamentos` (
@@ -35,7 +37,7 @@ CREATE TABLE `sm_pagamentos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 --
--- Fazendo dump de dados para tabela `sm_pagamentos`
+-- Extraindo dados da tabela `sm_pagamentos`
 --
 
 INSERT INTO `sm_pagamentos` (`pag_cliente_id`, `pag_data`, `pag_plan_id`, `pag_reco`, `pag_pago`) VALUES
@@ -95585,7 +95587,7 @@ INSERT INTO `sm_pagamentos` (`pag_cliente_id`, `pag_data`, `pag_plan_id`, `pag_r
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `sm_planos`
+-- Estrutura da tabela `sm_planos`
 --
 
 CREATE TABLE `sm_planos` (
@@ -95595,7 +95597,7 @@ CREATE TABLE `sm_planos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 --
--- Fazendo dump de dados para tabela `sm_planos`
+-- Extraindo dados da tabela `sm_planos`
 --
 
 INSERT INTO `sm_planos` (`plan_id`, `plan_nome`, `plan_valor`) VALUES
@@ -95605,17 +95607,17 @@ INSERT INTO `sm_planos` (`plan_id`, `plan_nome`, `plan_valor`) VALUES
 (4, 'Platina', '399.00');
 
 --
--- Índices de tabelas apagadas
+-- Índices para tabelas despejadas
 --
 
 --
--- Índices de tabela `sm_planos`
+-- Índices para tabela `sm_planos`
 --
 ALTER TABLE `sm_planos`
   ADD PRIMARY KEY (`plan_id`);
 
 --
--- AUTO_INCREMENT de tabelas apagadas
+-- AUTO_INCREMENT de tabelas despejadas
 --
 
 --
@@ -95623,6 +95625,8 @@ ALTER TABLE `sm_planos`
 --
 ALTER TABLE `sm_planos`
   MODIFY `plan_id` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

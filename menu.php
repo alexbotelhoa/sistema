@@ -2,7 +2,8 @@
 <div id="menu">
     <nav>
         <ul class="menu">
-            <li><a href="index.php">Home</a></li>
+            <li><a href="/">Portal</a></li>
+            <li><a href="/system/index.php">Home</a></li>
             <li><a href="#">Menu</a>
                 <ul>
                     <li><a href="plano.php">Planos</a></li>
@@ -12,6 +13,7 @@
             </li>
             <li><a href="#">Links</a>
                 <ul>
+                    <li><a href="https://www.alexbotelhoa.com/" target="_blank">Site</a></li>
                     <li><a href="https://www.linkedin.com/in/alex-botelho-almeida/" target="_blank">LinkedIn</a></li>
                     <li><a href="https://www.github.com/alexbotelhoa/" target="_blank">GitHub</a></li>
                     <li><a href="https://www.facebook.com/alexbotelhoa/" target="_blank">FaceBook</a></li>

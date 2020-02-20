@@ -12,10 +12,10 @@ if (isset($_POST['add']) or isset($_POST['alt'])) {
             $valor = str_replace(",", ".", $_POST['valor']);
 
             $sql = "INSERT INTO sm_planos (plan_nome,plan_valor) VALUES ('$nome','$valor')";
-            mysqli_query($con, $sql) or die ("<font style=Arial color=red>Houve um erro na gravação dos dados</font>");
-            if ($demo == false) {
-                mysqli_close($con);
+            if ($demosce1 != 0) {
+                mysqli_query($con, $sql) or die ("<font style=Arial color=red>Houve um erro na gravação dos dados</font>");
             }
+            mysqli_close($con);
 
             echo "<br><br><br><br><br>";
             echo "<center><font style='Arial' size='3' color='green'>Produto adicionado com sucesso!</font>";
@@ -26,10 +26,10 @@ if (isset($_POST['add']) or isset($_POST['alt'])) {
             $valor = str_replace(",", ".", $_POST['valor']);
 
             $sql = "UPDATE sm_planos SET plan_nome='$nome',plan_valor='$valor' WHERE plan_id=$_GET[id]";
-            mysqli_query($con, $sql) or die ("<font style=Arial color=red>Houve um erro na alteração dos dados</font>");
-            if ($demo == false) {
-                mysqli_close($con);
+            if ($demosce1 != 0) {
+                mysqli_query($con, $sql) or die ("<font style=Arial color=red>Houve um erro na alteração dos dados</font>");
             }
+            mysqli_close($con);
 
             echo "<br><br><br><br><br>";
             echo "<center><font style='Arial' size='3' color='green'>Produto alterado com sucesso!</font>";

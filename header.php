@@ -1,4 +1,5 @@
 <?php
+include 'config.php';
 include 'conexao.php';
 include 'funcoes.php';
 ?>

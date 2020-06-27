@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9b2c35de-6b57-4236-be2d-8cfc93a4bca4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.php" afterPath="$PROJECT_DIR$/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plano_body.php" afterPath="$PROJECT_DIR$/plano_body.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -287,7 +285,7 @@
       <workItem from="1582222063523" duration="6000" />
       <workItem from="1582228091907" duration="260000" />
       <workItem from="1582229163660" duration="456000" />
-      <workItem from="1582231583496" duration="489000" />
+      <workItem from="1582231583496" duration="509000" />
     </task>
     <task id="LOCAL-00001" summary="Reestruturação">
       <created>1582156849345</created>
@@ -317,11 +315,18 @@
       <option name="project" value="LOCAL" />
       <updated>1582229597617</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Reestruturação">
+      <created>1582232080995</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1582232080995</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="358651000" />
+    <option name="totallyTimeSpent" value="358671000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
